@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Thinking Scrap! Visualize your brand identity.">
     <meta name="author" content="Thinking Scrap">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Thinking Scrap</title>
     <!-- font icons -->
     <link rel="stylesheet" href="{{ URL::asset('assets/vendors/themify-icons/css/themify-icons.css') }}">
@@ -818,7 +819,7 @@
                     <p></p>
                 </div>
                 <div class="col-md-7">
-                    <form id="contactForm" enctype="multipart/form-data">
+                    <form id="contactForm" method="POST" enctype="multipart/form-data">
                         <h4 class="mb-4">Drop Us A Line</h4>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
@@ -878,9 +879,6 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/CSSRulePlugin.min.js"
         integrity="sha512-TJiE9joKYXjdf5nd0Kkzqt9QOYfp5Hk5W/PaeRmpOd7HYBVdSqpTxJezbfLzJnPrS7HGnalR54WO/hbppgDgkw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.22.0/axios.min.js"
-        integrity="sha512-m2ssMAtdCEYGWXQ8hXVG4Q39uKYtbfaJL5QMTbhl2kc6vYyubrKHhr6aLLXW4ITeXSywQLn1AhsAaqrJl8Acfg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>

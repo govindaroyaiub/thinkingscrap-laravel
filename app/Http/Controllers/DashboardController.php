@@ -12,8 +12,6 @@ class DashboardController extends Controller
     }
 
     public function contactStore(Request $request){
-
-        return $request->all();
         $contact = new Contact;
         $contact->name = $request->name;
         $contact->email = $request->email;
