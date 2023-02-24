@@ -17,6 +17,9 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <div id="loaderArea" id="loaderArea">
+        <span class="loader"></span>
+    </div>
     <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="ti-arrow-up"></i></button>
     <!-- page Navigation -->
     <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
@@ -815,23 +818,23 @@
                     <p></p>
                 </div>
                 <div class="col-md-7">
-                    <form>
+                    <form id="contactForm" enctype="multipart/form-data">
                         <h4 class="mb-4">Drop Us A Line</h4>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
                                 <input type="text" class="form-control text-white rounded-0 bg-transparent" name="name"
-                                    placeholder="Name">
+                                    placeholder="Name" id="name">
                             </div>
                             <div class="form-group col-sm-4">
                                 <input type="email" class="form-control text-white rounded-0 bg-transparent"
-                                    name="Email" placeholder="Email">
+                                    name="Email" placeholder="Email" id="email">
                             </div>
                             <div class="form-group col-sm-4">
                                 <input type="text" class="form-control text-white rounded-0 bg-transparent"
-                                    name="subject" placeholder="Subject">
+                                    name="subject" placeholder="Subject" id="subject">
                             </div>
                             <div class="form-group col-12">
-                                <textarea name="message" id="" cols="30" rows="4"
+                                <textarea name="message" id="message" cols="30" rows="4"
                                     class="form-control text-white rounded-0 bg-transparent"
                                     placeholder="Message"></textarea>
 
@@ -847,6 +850,7 @@
             <footer class="mt-5 py-4 border-top border-secondary" style="text-align: center;">
                 <p class="mb-0 small">&copy; <script>
                         document.write(new Date().getFullYear())
+
                     </script>, Developed By THINKING SCRAP. All rights reserved </p>
             </footer>
             <!-- End of Page Footer -->
@@ -862,6 +866,9 @@
 
     <!-- Isotope -->
     <script src="{{ URL::asset('assets/vendors/isotope/isotope.pkgd.js') }}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"
+        integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- LeadMark js -->
     <script src="{{ URL::asset('assets/js/leadmark.js') }}"></script>
@@ -869,7 +876,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
         integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/CSSRulePlugin.min.js" integrity="sha512-TJiE9joKYXjdf5nd0Kkzqt9QOYfp5Hk5W/PaeRmpOd7HYBVdSqpTxJezbfLzJnPrS7HGnalR54WO/hbppgDgkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/CSSRulePlugin.min.js"
+        integrity="sha512-TJiE9joKYXjdf5nd0Kkzqt9QOYfp5Hk5W/PaeRmpOd7HYBVdSqpTxJezbfLzJnPrS7HGnalR54WO/hbppgDgkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.22.0/axios.min.js"
+        integrity="sha512-m2ssMAtdCEYGWXQ8hXVG4Q39uKYtbfaJL5QMTbhl2kc6vYyubrKHhr6aLLXW4ITeXSywQLn1AhsAaqrJl8Acfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script>
         $(window).scroll(function () {
             var top_of_element = $("#opportunity").offset().top;
@@ -882,14 +896,42 @@
                 var tl2 = gsap.timeline();
                 var barTexts = CSSRulePlugin.getRule(".bar-inner:after");
                 tl2
-                .add('f1', '+=0.75')
-                .to('.bar-share', {duration: 2, width: '80%', ease: 'power2.out'}, 'f1')
-                .to('.bar-engagement', {duration: 2, width: '49%', ease: 'power2.out'}, 'f1')
-                .to('.bar-people', {duration: 2, width: '46%', ease: 'power2.out'}, 'f1')
-                .to('.bar-brandLift', {duration: 2, width: '20%', ease: 'power2.out'}, 'f1')
-                .to('.bar-min', {duration: 2, width: '50%', ease: 'power2.out'}, 'f1')
-                .to('.bar-billion', {duration: 2, width: '99%', ease: 'power2.out'}, 'f1')
-                .to(barTexts, {duration: 0.5, opacity: 1, ease: 'power2.out'}, 'f1+=1.15')
+                    .add('f1', '+=0.75')
+                    .to('.bar-share', {
+                        duration: 2,
+                        width: '80%',
+                        ease: 'power2.out'
+                    }, 'f1')
+                    .to('.bar-engagement', {
+                        duration: 2,
+                        width: '49%',
+                        ease: 'power2.out'
+                    }, 'f1')
+                    .to('.bar-people', {
+                        duration: 2,
+                        width: '46%',
+                        ease: 'power2.out'
+                    }, 'f1')
+                    .to('.bar-brandLift', {
+                        duration: 2,
+                        width: '20%',
+                        ease: 'power2.out'
+                    }, 'f1')
+                    .to('.bar-min', {
+                        duration: 2,
+                        width: '50%',
+                        ease: 'power2.out'
+                    }, 'f1')
+                    .to('.bar-billion', {
+                        duration: 2,
+                        width: '99%',
+                        ease: 'power2.out'
+                    }, 'f1')
+                    .to(barTexts, {
+                        duration: 0.5,
+                        opacity: 1,
+                        ease: 'power2.out'
+                    }, 'f1+=1.15')
             } else {
                 // the element is not visible, do something else
                 // alert('no');
@@ -1001,6 +1043,69 @@
             var clientSummary = document.getElementById('client-summary');
             clientSummary.innerHTML = client5Summary;
         }
+
+        $(document).ready(function () {
+            $("#contactForm").submit(function (e) {
+                e.preventDefault();
+                document.getElementById('loaderArea').style.display = "inline-block";
+                axios.post("/contactStore", {
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        subject: document.getElementById("subject").value,
+                        message: document.getElementById("message").value
+                    }, {
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        }
+                    })
+                    .then(response => {
+                        console.log(response);
+
+                        let timerInterval
+                        Swal.fire({
+                            title: 'Thanks for contacting us!',
+                            html: 'We will get to you as soon we can!',
+                            timer: 3000,
+                            timerProgressBar: true,
+                            didOpen: () => {
+                                Swal.showLoading()
+                                const b = Swal.getHtmlContainer().querySelector('b')
+                                timerInterval = setInterval(() => {
+                                b.textContent = Swal.getTimerLeft()
+                                }, 300)
+                            },
+                            willClose: () => {
+                                clearInterval(timerInterval)
+                            }
+                        }).then((result) => {
+                            /* Read more about handling dismissals below */
+                            if (result.dismiss === Swal.DismissReason.timer) {
+                                // console.log('I was closed by the timer')
+                            }
+                        })
+                    })
+                    .catch(function (error) {
+                        document.getElementById("name").value = '';
+                        document.getElementById("email").value = '';
+                        document.getElementById("subject").value = '';
+                        document.getElementById("message").value = '';
+
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'Something went wrong! We are really sorry for your inconvenience.',
+                        })
+                    })
+                    .then(function () {
+                        document.getElementById("name").value = '';
+                        document.getElementById("email").value = '';
+                        document.getElementById("subject").value = '';
+                        document.getElementById("message").value = '';
+                        document.getElementById('loaderArea').style.display = "none";
+                    });
+            });
+        });
+
     </script>
 
 </body>

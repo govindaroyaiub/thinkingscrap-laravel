@@ -25,6 +25,8 @@ Route::get('/dashboard', function () {
 
 Route::get('/messages', [DashboardController::class, 'messagesIndex'])->middleware(['auth', 'verified'])->name('messages');
 
+Route::post('/contactStore', [DashboardController::class, 'contactStore'])->name('contactStore');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
