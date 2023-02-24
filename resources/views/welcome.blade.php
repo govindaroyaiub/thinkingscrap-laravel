@@ -1057,8 +1057,6 @@
                         }
                     })
                     .then(response => {
-                        console.log(response);
-
                         let timerInterval
                         Swal.fire({
                             title: 'Thanks for contacting us!',
@@ -1070,7 +1068,7 @@
                                 const b = Swal.getHtmlContainer().querySelector('b')
                                 timerInterval = setInterval(() => {
                                 b.textContent = Swal.getTimerLeft()
-                                }, 300)
+                                }, 100)
                             },
                             willClose: () => {
                                 clearInterval(timerInterval)
