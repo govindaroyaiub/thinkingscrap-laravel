@@ -12242,7 +12242,7 @@ pre .code {
 }
 
 .form-control:focus {
-  border-color: #ff6e42;
+  border-color: rgb(254, 207, 127);
 }
 
 .form-control.form-control-sm {
