@@ -8,7 +8,8 @@ use App\Models\Contact;
 class DashboardController extends Controller
 {
     public function messagesIndex(){
-       return view('messages');
+        $data = Contact::orderBy('created_at', 'DESC')->get();
+       return view('messages', compact('data'));
     }
 
     public function contactStore(Request $request){
