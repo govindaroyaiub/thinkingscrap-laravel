@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -1133,68 +1132,68 @@
             document.documentElement.scrollTop = 0;
         }
 
-        var client1Summary = "This is BRAC project summary.";
-        var client2Summary = "We are promoting this exotic resort which is slowly making its way forward to be one of the best eco-tourism resort in Bangladesh, through digital content, digital enagagement, and brand promotion.";
-        var client3Summary = "We, as Event partner, collaborated with Gender, Justice and Diversity Programme of Brac, to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope Festival 2023, regarding the equality and equity of gender discrimination we face in our day-to-day life in our society.";
-        var client4Summary =
-            "Brand promotion through 'Quiz Master', an online quiz campaign in Bkash app.";
-        var client5Summary = "Caving pathway through Logo branding and engaging educators through brand promotion.";
-        var client6Summary = "Brand promotion through digital content, campaign,production and social media engagement";
-        var client7Summary = "Promoted the brand through publications. And production of AV to celebrate 50 Years of Bangladesh-Germany Bilateral Relations";
-        var client8Summary = "Participated in the Youth Against Corruption campaign as an event partner with UNDP to sensitize young people regarding corruption and promote anti-corruption awareness and advocacy.";
-        var client9Summary = "Promoted the brand by providing creative suppport on digital contents, souvenir design, press ads. In addition, printing of press ad, and souvenirs assured the partnership we have with the brand.";
-        var client10Summary = "Promoted the brand through product photography, production of creative designs and digital contents for social media platforms.";
+        // var client1Summary = "This is BRAC project summary.";
+        // var client2Summary = "We are promoting this exotic resort which is slowly making its way forward to be one of the best eco-tourism resort in Bangladesh, through digital content, digital enagagement, and brand promotion.";
+        // var client3Summary = "We, as Event partner, collaborated with Gender, Justice and Diversity Programme of Brac, to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope Festival 2023, regarding the equality and equity of gender discrimination we face in our day-to-day life in our society.";
+        // var client4Summary =
+        //     "Brand promotion through 'Quiz Master', an online quiz campaign in Bkash app.";
+        // var client5Summary = "Caving pathway through Logo branding and engaging educators through brand promotion.";
+        // var client6Summary = "Brand promotion through digital content, campaign,production and social media engagement";
+        // var client7Summary = "Promoted the brand through publications. And production of AV to celebrate 50 Years of Bangladesh-Germany Bilateral Relations";
+        // var client8Summary = "Participated in the Youth Against Corruption campaign as an event partner with UNDP to sensitize young people regarding corruption and promote anti-corruption awareness and advocacy.";
+        // var client9Summary = "Promoted the brand by providing creative suppport on digital contents, souvenir design, press ads. In addition, printing of press ad, and souvenirs assured the partnership we have with the brand.";
+        // var client10Summary = "Promoted the brand through product photography, production of creative designs and digital contents for social media platforms.";
 
 
-        function client1() {
-            var clientSummary = document.getElementById('client-summary');
-            clientSummary.innerHTML = client1Summary;
-        }
+        // function client1() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client1Summary;
+        // }
 
-        function client2() {
-            var clientSummary = document.getElementById('client-summary');
-            clientSummary.innerHTML = client2Summary;
-        }
+        // function client2() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client2Summary;
+        // }
 
-        function client3() {
-            var clientSummary = document.getElementById('client-summary');
-            clientSummary.innerHTML = client3Summary;
-        }
+        // function client3() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client3Summary;
+        // }
 
-        function client4() {
-            var clientSummary = document.getElementById('client-summary');
-            clientSummary.innerHTML = client4Summary;
-        }
+        // function client4() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client4Summary;
+        // }
 
-        function client5() {
-            var clientSummary = document.getElementById('client-summary');
-            clientSummary.innerHTML = client5Summary;
-        }
+        // function client5() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
 
-        function client6() {
-            var clientSummary = document.getElementById('client-summary');
-            clientSummary.innerHTML = client5Summary;
-        }
+        // function client6() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
 
-        function client7() {
-            var clientSummary = document.getElementById('client-summary');
-            clientSummary.innerHTML = client5Summary;
-        }
+        // function client7() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
 
-        function client8() {
-            var clientSummary = document.getElementById('client-summary');
-            clientSummary.innerHTML = client5Summary;
-        }
+        // function client8() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
 
-        function client9() {
-            var clientSummary = document.getElementById('client-summary');
-            clientSummary.innerHTML = client5Summary;
-        }
+        // function client9() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
 
-        function client10() {
-            var clientSummary = document.getElementById('client-summary');
-            clientSummary.innerHTML = client5Summary;
-        }
+        // function client10() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
 
         $(document).ready(function () {
             $("#contactForm").submit(function (e) {
