@@ -26,7 +26,7 @@
     <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/imgs/logo.png" alt="logo" style="width: 100%; max-width: 250px; min-width: 160px;">
+                <img src="assets/imgs/logo2.png" alt="logo" style="width: 100%; max-width: 250px; min-width: 160px;">
             </a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -65,9 +65,16 @@
     <!-- Page Header -->
     <header class="header" id="header">
         <div class="overlay" style="text-transform: uppercase; text-align: center;">
-            <h1 class="subtitle" style="transform: scale(1.75); opacity: 0;">We tell stories</h1>
-            <h1 class="title" style="transform: translateY(30px); opacity: 0;">Make audience visualize</h1>
-            <h1 class="title" style="transform: translateY(30px); opacity: 0;">Your Brand Identify</h1>
+            <div id="title" style="display: flex; flex-direction: row; justify-content: space-around; transform: translateY(30px); opacity: 0; padding-left: 30px; padding-right: 30px; margin-left: auto; margin-right: auto;">
+                <i class="ti-quote-left" aria-hidden="true"></i>
+                <h1 class="title">
+                    An idea is formed by little scraps
+                </h1>
+                <i class="ti-quote-right" aria-hidden="true"></i>
+            </div>
+
+            {{-- <h1 class="title" style="transform: translateY(30px); opacity: 0;">says Thinking Scrap</h1> --}}
+            <h1 class="subtitle" style="transform: scale(.5); opacity: 0;">- says Thinking Scrap</h1>
         </div>
         <div class="shape">
             <svg viewBox="0 0 1500 200">
@@ -82,33 +89,33 @@
     <!-- End Of Page Header -->
 
     <!-- About Section -->
-    <section class="section" id="about">
+    <section class="section" id="about" style="font-weight: bold; background-color: rgb(254, 207, 127);">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
-                    <h6 class="section-title mb-0">About Us</h6>
+                    {{-- <h6 class="section-title mb-0">About Us</h6> --}}
                     <h6 class="section-subtitle mb-4" style="font-size: 25px;">WHO WE ARE</h6>
-                    <p>The Digital world comes with many challenges and obstacles that are not easily
+                    <label>The Digital world comes with many challenges and obstacles that are not easily
                         tackled by just any mainstream organization, it takes innovative pioneers who
                         combine creativity and professionalism with a hint of perseverance to come up
                         with the most convenient Digital solutions. This is exactly what we “Thinking
                         Scrap” provide to seekers of top-notch quality services and individuals or
                         businesses who are eager for super convenient and efficient solutions. We
                         analyze what a brand actually needs to stand out from the crowd. In a
-                        marketplace too noisy, brands need to be honest first than being loud.</p>
-                    <img src="assets/imgs/about.jpg" alt="" class="w-100 mt-3 shadow-sm">
+                        marketplace too noisy, brands need to be honest first than being loud.</label>
+                    <img src="{{ asset('assets/imgs/about_us_1.jpg') }}" alt="about_us" class="w-100 mt-3 shadow-sm">
                 </div>
                 <div class="col-md-6 pl-md-5">
                     <div class="row">
                         <div class="col-6">
-                            <img src="assets/imgs/about-1.jpg" alt="" class="w-100 shadow-sm">
+                            <img src="{{ asset('assets/imgs/about_us_2.jpg') }}" alt="about_us" class="w-100 shadow-sm">
                         </div>
                         <div class="col-6">
-                            <img src="assets/imgs/about-2.jpg" alt="" class="w-100 shadow-sm">
+                            <img src="{{ asset('assets/imgs/about_us_3.jpg') }}" alt="about_us" class="w-100 shadow-sm">
                         </div>
                         <div class="col-12 mt-4">
                             <h6 class="section-subtitle mb-4" style="font-size: 25px;">WHAT WE DO</h6>
-                            <p>We as a team provide our 360-degree complete Digital solutions universally,
+                            <label>We as a team provide our 360-degree complete Digital solutions universally,
                                 we hope to reach out to many corners on the globe and create firm bonds
                                 with our customers in order to continue providing our outstanding services.
                                 We provide creative, strategic, and technical development of marketing
@@ -116,7 +123,7 @@
                                 Brand with exciting marketing contents and value to their target customers.
                                 Our understanding of marketing products empowers us to bring a level of
                                 expertise to your company like no one else. We know how to build a Brand
-                                that can scale to your business needs on point.</p>
+                                that can scale to your business needs on point.</label>
                         </div>
                     </div>
                 </div>
@@ -174,7 +181,7 @@
     <!-- End OF Opportunity Section -->
 
     <!-- Service Section -->
-    <section id="service" class="section pt-0">
+    <section id="service" class="section pt-0" style="font-weight: bold; background-color: rgb(254, 207, 127);">
         <br>
         <br>
         <br>
@@ -303,25 +310,40 @@
 
 
     <!-- Works Section -->
-    <section id="works" class="section portfolio-section">
+    {{-- <section id="works" class="section portfolio-section" style="background-color: rgb(254, 207, 127);">
         <div class="container">
             <h6 class="section-title text-center">Our Works</h6>
             <h6 class="section-subtitle mb-5 text-center">New stunning projects for our amazing clients</h6>
             <div class="filters">
                 <a href="#" data-filter=".new" class="active" onclick="client1()">
-                    BRAC
+                    Bosphorus
                 </a>
                 <a href="#" data-filter=".advertising" onclick="client2()">
-                    Bkash
+                    Black Forest Resort
                 </a>
                 <a href="#" data-filter=".branding" onclick="client3()">
-                    Winger
+                    BRAC - Shomotontro
                 </a>
                 <a href="#" data-filter=".web" onclick="client4()">
+                    Bkash
+                </a>
+                <a href="#" data-filter=".advertising" onclick="client5()">
+                    International Bilingual Learning Center
+                </a>
+                <a href="#" data-filter=".web" onclick="client6()">
+                    Amira
+                </a>
+                <a href="#" data-filter=".advertising" onclick="client7()">
+                    BGCCI
+                </a>
+                <a href="#" data-filter=".web" onclick="client8()">
                     UNDP
                 </a>
-                <a href="#" data-filter=".web" onclick="client5()">
-                    Another
+                <a href="#" data-filter=".advertising" onclick="client9()">
+                    Bashundhara Group
+                </a>
+                <a href="#" data-filter=".web" onclick="client10()">
+                    The Forrest Lounge
                 </a>
             </div>
             <div class="summary-container">
@@ -501,11 +523,111 @@
                 </div>
             </div>
         </div>
+    </section> --}}
+
+    <section class="section" id="works" style="background-color: rgb(254, 207, 127);">
+        <div class="container">
+            <h6 class="section-title mb-0 text-center">Our Works</h6>
+            <h6 class="section-subtitle mb-5 text-center"></h6>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                        <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Black Forest Resort</h6>
+                            <p>Fuga quae ratione inventore Perferendis porro.</p>
+                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                        <img src="{{ asset('assets/clients/Brac.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">                         
+                            <h6 class="card-title">BRAC - Shomotontro</h6>
+                            <p>We, as Event partner, collaborated with Gender, Justice and Diversity Programme of Brac, to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope Festival 2023, regarding the equality and equity of gender discrimination we face in our day-to-day life in our society.</p>
+                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                        <img src="{{ asset('assets/clients/Bkash.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Bkash</h6>
+                            <p>Brand promotion through 'Quiz Master', an online quiz campaign in Bkash app.</p>
+                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                        <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">                         
+                            <h6 class="card-title">International Bilingual Learning Center</h6>
+                            <p>Caving pathway through Logo branding and engaging educators through brand promotion.</p>
+                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                        <img src="{{ asset('assets/clients/Amira.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Amira</h6>
+                            <p>Brand promotion through digital content, campaign,production and social media engagement.</p>
+                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                        <img src="{{ asset('assets/clients/BGCCI.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">                         
+                            <h6 class="card-title">BGCCI</h6>
+                            <p>Promoted the brand through publications. And production of AV to celebrate 50 Years of Bangladesh-Germany Bilateral Relations.</p>
+                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                        <img src="{{ asset('assets/clients/UNDP.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">                         
+                            <h6 class="card-title">UNDP</h6>
+                            <p>Participated in the Youth Against Corruption campaign as an event partner with UNDP to sensitize young people regarding corruption and promote anti-corruption awareness and advocacy.</p>
+                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                        <img src="{{ asset('assets/clients/Basundhara.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Bashundhara Group</h6>
+                            <p>Promoted the brand by providing creative suppport on digital contents, souvenir design, press ads. In addition, printing of press ad, and souvenirs assured the partnership we have with the brand.</p>
+                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                        <img src="{{ asset('assets/clients/Forest-lounge.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">                         
+                            <h6 class="card-title">The Forrest Lounge</h6>
+                            <p>Promoted the brand through product photography, production of creative designs and digital contents for social media platforms.</p>
+                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- End of works section -->
 
     <!-- Team Section -->
-    <section id="team" class="section pt-0">
+    <section id="team" class="section pt-0" style="background-color: rgb(254, 207, 127);">
         <br>
         <br>
         <br>
@@ -607,7 +729,7 @@
     <!-- End of Blog Section -->
 
     <!-- Testmonial Section -->
-    <section class="section" id="quotes">
+    {{-- <section class="section" id="quotes">
         <div class="container">
             <h6 class="section-title text-center mb-0">Quotes</h6>
             <h6 class="section-subtitle mb-5 text-center"></h6>
@@ -659,11 +781,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- End of Testmonial Section -->
 
     <!-- Clients Section -->
-    <section class="section" id="clients">
+    <section class="section" id="clients" style="background-color: rgb(254, 207, 127);">
         <div class="container">
             <h6 class="section-title text-center mb-0">Our Clients</h6>
             <h6 class="section-subtitle mb-5 text-center"></h6>
@@ -801,7 +923,7 @@
     <section id="contact" class="section has-img-bg pb-0">
         <div class="container" style="text-align: center;">
             <h3>Where Are We Located?</h3>
-            <div id="map" style="overflow: hidden;"><img id="office-map" src="assets/imgs/map.png" alt="office-map">
+            <div id="map" style="overflow: hidden;"><img id="office-map" src="{{ asset('assets/imgs/Location.jpg') }}" alt="office-map">
             </div>
         </div>
         <br>
@@ -860,6 +982,7 @@
 
     <!-- core  -->
     <script src="{{ URL::asset('assets/vendors/jquery/jquery-3.4.1.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="{{ URL::asset('assets/vendors/bootstrap/bootstrap.bundle.js') }}"></script>
 
     <!-- bootstrap 3 affix -->
@@ -975,24 +1098,25 @@
             scrollFunction();
         };
         window.onload = function () {
-            scrollFunction();
-
             const tl = gsap.timeline();
 
             tl
-                .to('.subtitle', {
-                    duration: 0.75,
-                    scale: 1,
-                    opacity: 1,
-                    ease: 'power2.out'
-                }, '+=0.25')
-                .to('.title', {
-                    duration: 1,
-                    y: 0,
-                    opacity: 1,
-                    ease: 'power2.out',
-                    stagger: 0.5
-                }, '+=.15')
+            .add('f1')
+            .to('#title', {
+                duration: 1,
+                y: 0,
+                opacity: 1,
+                ease: 'power2.out',
+                stagger: 0.5
+            }, 'f1')
+            .to('.subtitle', {
+                duration: 0.75,
+                scale: 1,
+                opacity: 1,
+                ease: 'power2.out'
+            }, 'f1+=0.5')
+
+            scrollFunction();
         };
 
         function scrollFunction() {
@@ -1010,11 +1134,16 @@
         }
 
         var client1Summary = "This is BRAC project summary.";
-        var client2Summary = "This is client 2 summary.";
-        var client3Summary = "This is client 3 summary.";
+        var client2Summary = "We are promoting this exotic resort which is slowly making its way forward to be one of the best eco-tourism resort in Bangladesh, through digital content, digital enagagement, and brand promotion.";
+        var client3Summary = "We, as Event partner, collaborated with Gender, Justice and Diversity Programme of Brac, to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope Festival 2023, regarding the equality and equity of gender discrimination we face in our day-to-day life in our society.";
         var client4Summary =
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.";
-        var client5Summary = "HAKUNA MATATA. LIFE IS A MYSTERY. JOINT KHAITE MON CHAY";
+            "Brand promotion through 'Quiz Master', an online quiz campaign in Bkash app.";
+        var client5Summary = "Caving pathway through Logo branding and engaging educators through brand promotion.";
+        var client6Summary = "Brand promotion through digital content, campaign,production and social media engagement";
+        var client7Summary = "Promoted the brand through publications. And production of AV to celebrate 50 Years of Bangladesh-Germany Bilateral Relations";
+        var client8Summary = "Participated in the Youth Against Corruption campaign as an event partner with UNDP to sensitize young people regarding corruption and promote anti-corruption awareness and advocacy.";
+        var client9Summary = "Promoted the brand by providing creative suppport on digital contents, souvenir design, press ads. In addition, printing of press ad, and souvenirs assured the partnership we have with the brand.";
+        var client10Summary = "Promoted the brand through product photography, production of creative designs and digital contents for social media platforms.";
 
 
         function client1() {
@@ -1038,6 +1167,31 @@
         }
 
         function client5() {
+            var clientSummary = document.getElementById('client-summary');
+            clientSummary.innerHTML = client5Summary;
+        }
+
+        function client6() {
+            var clientSummary = document.getElementById('client-summary');
+            clientSummary.innerHTML = client5Summary;
+        }
+
+        function client7() {
+            var clientSummary = document.getElementById('client-summary');
+            clientSummary.innerHTML = client5Summary;
+        }
+
+        function client8() {
+            var clientSummary = document.getElementById('client-summary');
+            clientSummary.innerHTML = client5Summary;
+        }
+
+        function client9() {
+            var clientSummary = document.getElementById('client-summary');
+            clientSummary.innerHTML = client5Summary;
+        }
+
+        function client10() {
             var clientSummary = document.getElementById('client-summary');
             clientSummary.innerHTML = client5Summary;
         }
