@@ -20,4 +20,8 @@ class DashboardController extends Controller
         $contact->message = $request->message;
         $contact->save();
     }
+
+    public function wingsIndex(){
+        return view('wings');
+    }
 }

@@ -982,6 +982,7 @@
     <!-- core  -->
     <script src="{{ URL::asset('assets/vendors/jquery/jquery-3.4.1.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="{{ URL::asset('assets/vendors/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ URL::asset('assets/vendors/bootstrap/bootstrap.bundle.js') }}"></script>
 
     <!-- bootstrap 3 affix -->

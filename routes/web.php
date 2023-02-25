@@ -24,6 +24,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/messages', [DashboardController::class, 'messagesIndex'])->middleware(['auth', 'verified'])->name('messages');
+Route::get('/wings', [DashboardController::class, 'wingsIndex'])->middleware(['auth', 'verified'])->name('wings');
 
 Route::post('/contactStore', [DashboardController::class, 'contactStore'])->name('contactStore');
 
