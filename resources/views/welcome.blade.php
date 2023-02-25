@@ -67,14 +67,14 @@
         <div class="overlay" style="text-transform: uppercase; text-align: center;">
             <div id="title" style="display: flex; flex-direction: row; justify-content: space-around; transform: translateY(30px); opacity: 0; padding-left: 30px; padding-right: 30px; margin-left: auto; margin-right: auto;">
                 <i class="ti-quote-left" aria-hidden="true"></i>
-                <h1 class="title">
+                <h1 class="title" style="text-shadow: 0 0 10px #555;">
                     An idea is formed by little scraps
                 </h1>
                 <i class="ti-quote-right" aria-hidden="true"></i>
             </div>
 
             {{-- <h1 class="title" style="transform: translateY(30px); opacity: 0;">says Thinking Scrap</h1> --}}
-            <h1 class="subtitle" style="transform: scale(.5); opacity: 0;">- says Thinking Scrap</h1>
+            <h1 class="subtitle" style="transform: scale(.5); opacity: 0; text-shadow: 0 0 10px #555;">- says Thinking Scrap</h1>
         </div>
         <div class="shape">
             <svg viewBox="0 0 1500 200">
@@ -532,7 +532,7 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
                         <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
                         <div class="card-body">                         
                             <h6 class="card-title">Black Forest Resort</h6>
@@ -542,7 +542,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
                         <img src="{{ asset('assets/clients/Brac.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
                         <div class="card-body">                         
                             <h6 class="card-title">BRAC - Shomotontro</h6>
@@ -552,7 +552,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
                         <img src="{{ asset('assets/clients/Bkash.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
                         <div class="card-body">                         
                             <h6 class="card-title">Bkash</h6>
@@ -562,7 +562,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
                         <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
                         <div class="card-body">                         
                             <h6 class="card-title">International Bilingual Learning Center</h6>
@@ -572,7 +572,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
                         <img src="{{ asset('assets/clients/Amira.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
                         <div class="card-body">                         
                             <h6 class="card-title">Amira</h6>
@@ -582,7 +582,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
                         <img src="{{ asset('assets/clients/BGCCI.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
                         <div class="card-body">                         
                             <h6 class="card-title">BGCCI</h6>
@@ -592,7 +592,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
                         <img src="{{ asset('assets/clients/UNDP.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
                         <div class="card-body">                         
                             <h6 class="card-title">UNDP</h6>
@@ -602,7 +602,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
                         <img src="{{ asset('assets/clients/Basundhara.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
                         <div class="card-body">                         
                             <h6 class="card-title">Bashundhara Group</h6>
@@ -612,7 +612,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
                         <img src="{{ asset('assets/clients/Forest-lounge.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
                         <div class="card-body">                         
                             <h6 class="card-title">The Forrest Lounge</h6>
@@ -792,117 +792,117 @@
             <div class="relative" style="position: relative;">
                 <div class="owl-carousel client-carousel">
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Abrar.png" alt="abrar" width="210"
+                        <img class="client-image" src="assets/clients/Abrar.png" alt="abrar" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Amira.png" alt="amira" width="210"
+                        <img class="client-image" src="assets/clients/Amira.png" alt="amira" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Basundhara.png" alt="Basundhara" width="210"
+                        <img class="client-image" src="assets/clients/Basundhara.png" alt="Basundhara" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/BGCCI.png" alt="BGCCI" width="210"
+                        <img class="client-image" src="assets/clients/BGCCI.png" alt="BGCCI" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Bkash.png" alt="Bkash" width="210"
+                        <img class="client-image" src="assets/clients/Bkash.png" alt="Bkash" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Bosphorus.png" alt="Bosphorus" width="210"
+                        <img class="client-image" src="assets/clients/Bosphorus.png" alt="Bosphorus" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Brac.png" alt="Brac" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Brac.png" alt="Brac" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/C_zar.png" alt="C_zar" width="210"
+                        <img class="client-image" src="assets/clients/C_zar.png" alt="C_zar" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Carbrorellaor.png" alt="Carbrorellaor" width="210"
+                        <img class="client-image" src="assets/clients/Carbrorellaor.png" alt="Carbrorellaor" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/CM.png" alt="CM" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/CM.png" alt="CM" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Dark-Burg.png" alt="Dark-Burg" width="210"
+                        <img class="client-image" src="assets/clients/Dark-Burg.png" alt="Dark-Burg" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Doict.png" alt="Doict" width="210"
+                        <img class="client-image" src="assets/clients/Doict.png" alt="Doict" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Dreamweave.png" alt="Dreamweave" width="210"
+                        <img class="client-image" src="assets/clients/Dreamweave.png" alt="Dreamweave" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/easytrax.png" alt="easytrax" width="210"
+                        <img class="client-image" src="assets/clients/easytrax.png" alt="easytrax" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/Fantasy-island.png" alt="Fantasy-island"
-                            width="210" height="auto" />
+                            width="150" height="auto" />
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/Food-and-flavours.png" alt="Food-and-flavours"
-                            width="210" height="auto" />
+                            width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Forest-lounge.png" alt="Forest-lounge" width="210"
+                        <img class="client-image" src="assets/clients/Forest-lounge.png" alt="Forest-lounge" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Humba-hat.png" alt="Humba-hat" width="210"
+                        <img class="client-image" src="assets/clients/Humba-hat.png" alt="Humba-hat" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Medimete.png" alt="Medimete" width="210"
+                        <img class="client-image" src="assets/clients/Medimete.png" alt="Medimete" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Nairobi.png" alt="Nairobi" width="210"
+                        <img class="client-image" src="assets/clients/Nairobi.png" alt="Nairobi" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Omera.png" alt="Omera" width="210"
+                        <img class="client-image" src="assets/clients/Omera.png" alt="Omera" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Phr.png" alt="Phr" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Phr.png" alt="Phr" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/RR.png" alt="RR" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/RR.png" alt="RR" width="150" height="auto" />
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/Save-the-children.png" alt="Save-the-children"
-                            width="210" height="auto" />
+                            width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Tapout.png" alt="Tapout" width="210"
+                        <img class="client-image" src="assets/clients/Tapout.png" alt="Tapout" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Thai.png" alt="Thai" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Thai.png" alt="Thai" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Tracker.png" alt="Tracker" width="210"
+                        <img class="client-image" src="assets/clients/Tracker.png" alt="Tracker" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Undp.png" alt="Undp" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Undp.png" alt="Undp" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Winger.png" alt="Winger" width="210"
+                        <img class="client-image" src="assets/clients/Winger.png" alt="Winger" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Wood-peacker.png" alt="Wood-peacker" width="210"
+                        <img class="client-image" src="assets/clients/Wood-peacker.png" alt="Wood-peacker" width="150"
                             height="auto" />
                     </div>
                 </div>

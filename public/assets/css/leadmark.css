@@ -12351,7 +12351,7 @@ textarea.form-control {
 .navbar.custom-navbar.affix {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
-  background: rgb(254, 207, 127);
+  background: #f5ba56;
   /* border-bottom: 1px solid #dee2e6; */
 }
 
@@ -13192,7 +13192,7 @@ textarea.form-control {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   #office-map {
-    left: -388px;
+    left: -222px;
   }
 
   .client-image {
@@ -13208,12 +13208,16 @@ textarea.form-control {
   .bar-inner:after{
     font-size: 12px;
   }
+
+  .work-section img{
+    width: 250px!important;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   #office-map {
-    left: -388px;
+    left: -222px;
   }
 
   .client-image {
@@ -13233,12 +13237,16 @@ textarea.form-control {
   .wings-box{
     min-height: 390px;
   }
+
+  .work-section img{
+    width: 120px!important;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   #office-map {
-    left: -200px;
+    left: -31px;
   }
 
   .client-image {
@@ -13257,6 +13265,10 @@ textarea.form-control {
 
   .wings-box{
     min-height: 390px;
+  }
+
+  .work-section img{
+    width: 120px!important;
   }
 }
 
@@ -13278,6 +13290,10 @@ textarea.form-control {
 
   .wings-box{
     min-height: 275px;
+  }
+
+  .work-section img{
+    width: 250px!important;
   }
 }
 
@@ -13303,6 +13319,10 @@ textarea.form-control {
 
   .wings-box{
     min-height: 275px;
+  }
+
+  .work-section img{
+    width: 250px!important;
   }
 }
 
