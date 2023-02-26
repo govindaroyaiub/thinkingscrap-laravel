@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,7 +25,7 @@
     <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/imgs/logo.png" alt="logo" style="width: 100%; max-width: 250px; min-width: 160px;">
+                <img src="assets/imgs/logo2.png" alt="logo" style="width: 100%; max-width: 250px; min-width: 160px;">
             </a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -44,9 +43,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#works">Our Works</a>
                     </li>
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="#team">Team</a>
-                    </li> --}}
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#clients">Our Clients</a>
                     </li>
@@ -181,7 +180,7 @@
     <!-- End OF Opportunity Section -->
 
     <!-- Service Section -->
-    <section id="service" class="section pt-0" style="background-color: rgb(254, 207, 127);">
+    <section id="service" class="section pt-0" style="font-weight: bold; background-color: rgb(254, 207, 127);">
         <br>
         <br>
         <br>
@@ -310,6 +309,221 @@
 
 
     <!-- Works Section -->
+    {{-- <section id="works" class="section portfolio-section" style="background-color: rgb(254, 207, 127);">
+        <div class="container">
+            <h6 class="section-title text-center">Our Works</h6>
+            <h6 class="section-subtitle mb-5 text-center">New stunning projects for our amazing clients</h6>
+            <div class="filters">
+                <a href="#" data-filter=".new" class="active" onclick="client1()">
+                    Bosphorus
+                </a>
+                <a href="#" data-filter=".advertising" onclick="client2()">
+                    Black Forest Resort
+                </a>
+                <a href="#" data-filter=".branding" onclick="client3()">
+                    BRAC - Shomotontro
+                </a>
+                <a href="#" data-filter=".web" onclick="client4()">
+                    Bkash
+                </a>
+                <a href="#" data-filter=".advertising" onclick="client5()">
+                    International Bilingual Learning Center
+                </a>
+                <a href="#" data-filter=".web" onclick="client6()">
+                    Amira
+                </a>
+                <a href="#" data-filter=".advertising" onclick="client7()">
+                    BGCCI
+                </a>
+                <a href="#" data-filter=".web" onclick="client8()">
+                    UNDP
+                </a>
+                <a href="#" data-filter=".advertising" onclick="client9()">
+                    Bashundhara Group
+                </a>
+                <a href="#" data-filter=".web" onclick="client10()">
+                    The Forrest Lounge
+                </a>
+            </div>
+            <div class="summary-container">
+                <span id="client-summary">This is BRAC project Summary</span>
+            </div>
+            <div class="portfolio-container">
+                <div class="col-md-6 col-lg-4 web new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/web-1.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/web-1.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 web new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/web-2.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/web-2.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 advertising new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/advertising-2.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/advertising-2.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 web">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/web-4.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/web-4.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 advertising">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/advertising-1.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/advertising-1.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 web new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/web-3.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/web-3.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 advertising new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/advertising-3.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/advertising-3.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 advertising new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/advertising-4.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/advertising-4.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6 col-lg-4 branding new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/branding-1.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/branding-1.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 branding">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/branding-2.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/branding-2.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 branding new">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/branding-3.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/branding-3.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 branding">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/branding-4.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/branding-4.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 branding">
+                    <div class="portfolio-item">
+                        <img src="assets/imgs/branding-5.jpg" class="img-fluid"
+                            alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
+                        <div class="content-holder">
+                            <a class="img-popup" href="assets/imgs/branding-5.jpg"></a>
+                            <div class="text-holder">
+                                <h6 class="title">Title</h6>
+                                <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> --}}
+
     <section class="section" id="works" style="background-color: rgb(254, 207, 127);">
         <div class="container">
             <h6 class="section-title mb-0 text-center">Our Works</h6>
@@ -412,7 +626,7 @@
     <!-- End of works section -->
 
     <!-- Team Section -->
-    {{-- <section id="team" class="section pt-0">
+    <section id="team" class="section pt-0" style="background-color: rgb(254, 207, 127);">
         <br>
         <br>
         <br>
@@ -468,7 +682,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     <!-- End OF Team Section -->
 
     <!-- Blog Section -->
@@ -514,7 +728,7 @@
     <!-- End of Blog Section -->
 
     <!-- Testmonial Section -->
-    <section class="section" id="quotes">
+    {{-- <section class="section" id="quotes">
         <div class="container">
             <h6 class="section-title text-center mb-0">Quotes</h6>
             <h6 class="section-subtitle mb-5 text-center"></h6>
@@ -566,128 +780,128 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- End of Testmonial Section -->
 
     <!-- Clients Section -->
-    <section class="section" id="clients">
+    <section class="section" id="clients" style="background-color: rgb(254, 207, 127);">
         <div class="container">
             <h6 class="section-title text-center mb-0">Our Clients</h6>
             <h6 class="section-subtitle mb-5 text-center"></h6>
             <div class="relative" style="position: relative;">
                 <div class="owl-carousel client-carousel">
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Abrar.png" alt="abrar" width="210"
+                        <img class="client-image" src="assets/clients/Abrar.png" alt="abrar" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Amira.png" alt="amira" width="210"
+                        <img class="client-image" src="assets/clients/Amira.png" alt="amira" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Basundhara.png" alt="Basundhara" width="210"
+                        <img class="client-image" src="assets/clients/Basundhara.png" alt="Basundhara" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/BGCCI.png" alt="BGCCI" width="210"
+                        <img class="client-image" src="assets/clients/BGCCI.png" alt="BGCCI" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Bkash.png" alt="Bkash" width="210"
+                        <img class="client-image" src="assets/clients/Bkash.png" alt="Bkash" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Bosphorus.png" alt="Bosphorus" width="210"
+                        <img class="client-image" src="assets/clients/Bosphorus.png" alt="Bosphorus" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Brac.png" alt="Brac" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Brac.png" alt="Brac" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/C_zar.png" alt="C_zar" width="210"
+                        <img class="client-image" src="assets/clients/C_zar.png" alt="C_zar" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Carbrorellaor.png" alt="Carbrorellaor" width="210"
+                        <img class="client-image" src="assets/clients/Carbrorellaor.png" alt="Carbrorellaor" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/CM.png" alt="CM" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/CM.png" alt="CM" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Dark-Burg.png" alt="Dark-Burg" width="210"
+                        <img class="client-image" src="assets/clients/Dark-Burg.png" alt="Dark-Burg" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Doict.png" alt="Doict" width="210"
+                        <img class="client-image" src="assets/clients/Doict.png" alt="Doict" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Dreamweave.png" alt="Dreamweave" width="210"
+                        <img class="client-image" src="assets/clients/Dreamweave.png" alt="Dreamweave" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/easytrax.png" alt="easytrax" width="210"
+                        <img class="client-image" src="assets/clients/easytrax.png" alt="easytrax" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/Fantasy-island.png" alt="Fantasy-island"
-                            width="210" height="auto" />
+                            width="150" height="auto" />
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/Food-and-flavours.png" alt="Food-and-flavours"
-                            width="210" height="auto" />
+                            width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Forest-lounge.png" alt="Forest-lounge" width="210"
+                        <img class="client-image" src="assets/clients/Forest-lounge.png" alt="Forest-lounge" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Humba-hat.png" alt="Humba-hat" width="210"
+                        <img class="client-image" src="assets/clients/Humba-hat.png" alt="Humba-hat" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Medimete.png" alt="Medimete" width="210"
+                        <img class="client-image" src="assets/clients/Medimete.png" alt="Medimete" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Nairobi.png" alt="Nairobi" width="210"
+                        <img class="client-image" src="assets/clients/Nairobi.png" alt="Nairobi" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Omera.png" alt="Omera" width="210"
+                        <img class="client-image" src="assets/clients/Omera.png" alt="Omera" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Phr.png" alt="Phr" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Phr.png" alt="Phr" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/RR.png" alt="RR" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/RR.png" alt="RR" width="150" height="auto" />
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/Save-the-children.png" alt="Save-the-children"
-                            width="210" height="auto" />
+                            width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Tapout.png" alt="Tapout" width="210"
+                        <img class="client-image" src="assets/clients/Tapout.png" alt="Tapout" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Thai.png" alt="Thai" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Thai.png" alt="Thai" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Tracker.png" alt="Tracker" width="210"
+                        <img class="client-image" src="assets/clients/Tracker.png" alt="Tracker" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Undp.png" alt="Undp" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Undp.png" alt="Undp" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Winger.png" alt="Winger" width="210"
+                        <img class="client-image" src="assets/clients/Winger.png" alt="Winger" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Wood-peacker.png" alt="Wood-peacker" width="210"
+                        <img class="client-image" src="assets/clients/Wood-peacker.png" alt="Wood-peacker" width="150"
                             height="auto" />
                     </div>
                 </div>
@@ -708,7 +922,7 @@
     <section id="contact" class="section has-img-bg pb-0">
         <div class="container" style="text-align: center;">
             <h3>Where Are We Located?</h3>
-                <div id="map" style="overflow: hidden;"><img id="office-map" src="{{ asset('assets/imgs/Location.jpg') }}" alt="office-map">
+            <div id="map" style="overflow: hidden;"><img id="office-map" src="{{ asset('assets/imgs/Location.jpg') }}" alt="office-map">
             </div>
         </div>
         <br>
@@ -767,6 +981,8 @@
 
     <!-- core  -->
     <script src="{{ URL::asset('assets/vendors/jquery/jquery-3.4.1.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="{{ URL::asset('assets/vendors/bootstrap/bootstrap.min.js') }}"></script>
     <script src="{{ URL::asset('assets/vendors/bootstrap/bootstrap.bundle.js') }}"></script>
 
     <!-- bootstrap 3 affix -->
@@ -882,8 +1098,6 @@
             scrollFunction();
         };
         window.onload = function () {
-            scrollFunction();
-
             const tl = gsap.timeline();
 
             tl
@@ -901,6 +1115,8 @@
                 opacity: 1,
                 ease: 'power2.out'
             }, 'f1+=0.5')
+
+            scrollFunction();
         };
 
         function scrollFunction() {
@@ -916,6 +1132,69 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+        // var client1Summary = "This is BRAC project summary.";
+        // var client2Summary = "We are promoting this exotic resort which is slowly making its way forward to be one of the best eco-tourism resort in Bangladesh, through digital content, digital enagagement, and brand promotion.";
+        // var client3Summary = "We, as Event partner, collaborated with Gender, Justice and Diversity Programme of Brac, to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope Festival 2023, regarding the equality and equity of gender discrimination we face in our day-to-day life in our society.";
+        // var client4Summary =
+        //     "Brand promotion through 'Quiz Master', an online quiz campaign in Bkash app.";
+        // var client5Summary = "Caving pathway through Logo branding and engaging educators through brand promotion.";
+        // var client6Summary = "Brand promotion through digital content, campaign,production and social media engagement";
+        // var client7Summary = "Promoted the brand through publications. And production of AV to celebrate 50 Years of Bangladesh-Germany Bilateral Relations";
+        // var client8Summary = "Participated in the Youth Against Corruption campaign as an event partner with UNDP to sensitize young people regarding corruption and promote anti-corruption awareness and advocacy.";
+        // var client9Summary = "Promoted the brand by providing creative suppport on digital contents, souvenir design, press ads. In addition, printing of press ad, and souvenirs assured the partnership we have with the brand.";
+        // var client10Summary = "Promoted the brand through product photography, production of creative designs and digital contents for social media platforms.";
+
+
+        // function client1() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client1Summary;
+        // }
+
+        // function client2() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client2Summary;
+        // }
+
+        // function client3() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client3Summary;
+        // }
+
+        // function client4() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client4Summary;
+        // }
+
+        // function client5() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
+
+        // function client6() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
+
+        // function client7() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
+
+        // function client8() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
+
+        // function client9() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
+
+        // function client10() {
+        //     var clientSummary = document.getElementById('client-summary');
+        //     clientSummary.innerHTML = client5Summary;
+        // }
 
         $(document).ready(function () {
             $("#contactForm").submit(function (e) {
