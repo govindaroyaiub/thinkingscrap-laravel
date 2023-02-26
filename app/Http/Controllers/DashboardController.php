@@ -24,4 +24,8 @@ class DashboardController extends Controller
     public function wingsIndex(){
         return view('wings');
     }
+
+    public function clientsIndex(){
+        return view('clients');
+    }
 }

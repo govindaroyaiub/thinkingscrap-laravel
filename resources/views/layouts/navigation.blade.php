@@ -23,10 +23,16 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('clients')" :active="request()->routeIs('clients')">
+                        Clients
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('messages')" :active="request()->routeIs('messages')">
                         Messages
                     </x-nav-link>
                 </div>
+                
             </div>
 
             <!-- Settings Dropdown -->
@@ -86,9 +92,13 @@
             <x-responsive-nav-link :href="route('wings')" :active="request()->routeIs('wings')">
                 Our Wings
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('clients')" :active="request()->routeIs('clients')">
+                Clients
+            </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('messages')" :active="request()->routeIs('messages')">
                 Messages
             </x-responsive-nav-link>
+            
         </div>
 
         <!-- Responsive Settings Options -->
