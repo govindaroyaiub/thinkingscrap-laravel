@@ -164,6 +164,10 @@
             }
         }
 
+        #bracmore {
+            display: none;
+        }
+
     </style>
 </head>
 
@@ -241,7 +245,7 @@
     <!-- End Of Page Header -->
 
     <!-- About Section -->
-    <section class="section" id="about" style="font-weight: bold; background-color: rgb(254, 207, 127);">
+    <section class="section" id="about" style="font-weight: bold; background-color: rgb(255, 241, 215);">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
@@ -285,47 +289,51 @@
     <!-- End OF About Section -->
 
     <!-- Opportunity Section -->
-    <section id="opportunity" class="section pt-0" style="background-color: rgb(254, 207, 127);">
-        <br>
+    <section id="opportunity" class="section pt-0" style="background-color: rgb(255, 241, 215);">
         <br>
         <br>
         <div class="container">
-            <h6 class="section-title text-center" style="color: rgb(152, 17, 10);">Window Of Opportunity</h6>
+            <h6 class="section-title text-center" style="color: rgb(152, 17, 10); text-align: center;">Window Of Opportunity</h6>
             <h6 class="section-subtitle text-center mb-5 pb-3"></h6>
 
-            <div class="chart">
-                <h2 class="bar-title">More Shares Than
-                    Image and Text
-                    Content Combined</h2>
-                <div class="bar">
-                    <div class="bar-inner bar-share" data-percentage="1200% Shares"></div>
+            <div class="wrapper">
+                <div class="container-wrap">
+                    <span class="num" data-val="1200">00</span>
+                    <h5 class="text" style="text-align: center;">Shares (%)</h5>
+                    <span class="text">More Shares Than
+                        Image and Text
+                        Content Combined</span>
                 </div>
-                <h2 class="bar-title">More Engagement than Other
-                    Types of Content</h2>
-                <div class="bar">
-                    <div class="bar-inner bar-engagement" data-percentage="59% Engagement"></div>
+                <div class="container-wrap">
+                    <span class="num" data-val="59">00</span>
+                    <h5 class="text" style="text-align: center;">Engagement (%)</h5>
+                    <span class="text">More Engagement than Other
+                        Types of Content</span>
                 </div>
-                <h2 class="bar-title">Majority of the People Want
-                    Marketers to Produce More
-                    Video Content</h2>
-                <div class="bar">
-                    <div class="bar-inner bar-people" data-percentage="54% People"></div>
+                <div class="container-wrap">
+                    <span class="num" data-val="54">00</span>
+                    <h5 class="text" style="text-align: center;">People (%)</h5>
+                    <span class="text">Majority of the People Want Marketers to Produce More Video Content
+                    </span>
                 </div>
-                <h2 class="bar-title">Video Ad Campaigns Drive
-                    More brand Awareness
-                    Compared to Other Ads</h2>
-                <div class="bar">
-                    <div class="bar-inner bar-brandLift" data-percentage="27% Lift"></div>
+                <div class="container-wrap">
+                    <span class="num" data-val="27">00</span>
+                    <h5 class="text" style="text-align: center;">Lift (%)</h5>
+                    <span class="text">Video Ad Campaigns Drive
+                        More brand Awareness
+                        Compared to Other Ads</span>
                 </div>
-                <h2 class="bar-title">On Average A Person
-                    Uses Facebook</h2>
-                <div class="bar">
-                    <div class="bar-inner bar-min" data-percentage="54 Min"></div>
+                <div class="container-wrap">
+                    <span class="num" data-val="54">00</span>
+                    <h5 class="text" style="text-align: center;">Min</h5>
+                    <span class="text">On Average A Person
+                        Uses Facebook</span>
                 </div>
-                <h2 class="bar-title">Daily Facebook
-                    Views</h2>
-                <div class="bar">
-                    <div class="bar-inner bar-billion" data-percentage="8 Billion"></div>
+                <div class="container-wrap">
+                    <span class="num" data-val="8">0</span>
+                    <h5 class="text" style="text-align: center;">Billion</h5>
+                    <span class="text">Daily Facebook
+                        Views</span>
                 </div>
             </div>
         </div>
@@ -333,7 +341,7 @@
     <!-- End OF Opportunity Section -->
 
     <!-- Service Section -->
-    <section id="service" class="section pt-0" style="background-color: rgb(254, 207, 127);">
+    <section id="service" class="section pt-0" style="background-color: rgb(255, 241, 215);">
         <br>
         <br>
         <br>
@@ -342,7 +350,7 @@
             <h6 class="section-subtitle text-center mb-5 pb-3">Services We Provide.</h6>
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" >
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">01</small>
@@ -462,14 +470,14 @@
 
 
     <!-- Works Section -->
-    <section class="section" id="works" style="background-color: rgb(254, 207, 127);">
+    <section class="section" id="works" style="background-color: rgb(255, 241, 215);">
         <div class="container">
             <h6 class="section-title mb-0 text-center">Our Works</h6>
             <h6 class="section-subtitle mb-5 text-center"></h6>
 
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
@@ -504,22 +512,22 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Brac.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
                             <h6 class="card-title">BRAC - Shomotontro</h6>
-                            <p>We, as Event partner, collaborated with Gender, Justice and Diversity Programme of Brac,
-                                to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope
+                            <p>We, as Event partner, collaborated with Gender, Justice and Diversity Programme of Brac<span id="bracdots">...</span>
+                                <span id="bracmore"> to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope
                                 Festival 2023, regarding the equality and equity of gender discrimination we face in our
-                                day-to-day life in our society.</p>
+                                day-to-day life in our society.</span><a href="javascript:void(0)" onclick="revealbracmore()" id="revealbracmore" style="color:rgb(152, 17, 10)">Read more</a></p>
                             <a href="javascript:void(0)" class="small text-muted"
                                 style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Bkash.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
@@ -531,7 +539,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
@@ -543,7 +551,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Amira.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
@@ -556,7 +564,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/BGCCI.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
@@ -569,7 +577,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Undp.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
@@ -583,7 +591,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Basundhara.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
@@ -597,7 +605,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Forest-lounge.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
@@ -773,7 +781,7 @@
     <!-- End of Testmonial Section -->
 
     <!-- Clients Section -->
-    <section class="section" id="clients" style="background-color: rgb(254, 207, 127);">
+    <section class="section" id="clients" style="background-color: rgb(255, 241, 215);">
         <div class="container">
             <h6 class="section-title text-center mb-0">Our Clients</h6>
             <h6 class="section-subtitle mb-5 text-center"></h6>
@@ -1019,9 +1027,25 @@
                 mpopup.style.display = "none";
             }
         };
+        function revealbracmore() {
+            var dots = document.getElementById("bracdots");
+            var moreText = document.getElementById("bracmore");
+            var btnText = document.getElementById("revealbracmore");
 
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
     </script>
     <script>
+        var counter = true;
+
         $(window).scroll(function () {
             var top_of_element = $("#opportunity").offset().top;
             var bottom_of_element = $("#opportunity").offset().top + $("#opportunity").outerHeight();
@@ -1029,46 +1053,27 @@
             var top_of_screen = $(window).scrollTop();
 
             if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
-                // the element is visible, do something
-                var tl2 = gsap.timeline();
-                var barTexts = CSSRulePlugin.getRule(".bar-inner:after");
-                tl2
-                    .add('f1', '+=0.75')
-                    .to('.bar-share', {
-                        duration: 2,
-                        width: '80%',
-                        ease: 'power2.out'
-                    }, 'f1')
-                    .to('.bar-engagement', {
-                        duration: 2,
-                        width: '49%',
-                        ease: 'power2.out'
-                    }, 'f1')
-                    .to('.bar-people', {
-                        duration: 2,
-                        width: '46%',
-                        ease: 'power2.out'
-                    }, 'f1')
-                    .to('.bar-brandLift', {
-                        duration: 2,
-                        width: '20%',
-                        ease: 'power2.out'
-                    }, 'f1')
-                    .to('.bar-min', {
-                        duration: 2,
-                        width: '50%',
-                        ease: 'power2.out'
-                    }, 'f1')
-                    .to('.bar-billion', {
-                        duration: 2,
-                        width: '99%',
-                        ease: 'power2.out'
-                    }, 'f1')
-                    .to(barTexts, {
-                        duration: 0.5,
-                        opacity: 1,
-                        ease: 'power2.out'
-                    }, 'f1+=1.15')
+                if(counter == true){
+                    let valueDisplays = document.querySelectorAll(".num");
+                    console.log(valueDisplays);
+                    let interval = 5000;
+                    valueDisplays.forEach((valueDisplay) => {
+                        let startValue = 0;
+                        let endValue = parseInt(valueDisplay.getAttribute
+                        ("data-val"));
+                        let duration= Math.floor(interval / endValue);
+                        let counter = setInterval(function () {
+                            startValue += 1;
+                            valueDisplay.textContent = startValue;
+                            if (startValue == endValue) {
+                                clearInterval(counter);
+                            }
+                        }, duration);
+                    });
+
+                    counter = false;
+                }
+                
             } else {
                 // the element is not visible, do something else
                 // alert('no');

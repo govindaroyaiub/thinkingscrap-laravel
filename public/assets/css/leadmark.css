@@ -12602,7 +12602,7 @@ textarea.form-control {
 
 .header .shape svg path {
   /* fill: #fff; */
-  fill: rgb(254, 207, 127);
+  fill: rgb(255, 241, 215);
 }
 
 @media (max-width: 1199.98px) {
@@ -13071,83 +13071,6 @@ textarea.form-control {
   color: #222;
 }
 
-.chart{
-  margin: 0 auto;
-  width: 100%;
-  overflow: hidden;
-  box-shadow: 0 0 10px #555;
-  padding: 25px 25px 25px 25px;
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-}
-
-.bar-title{
-  font-weight: 700;
-  font-size: 18px;
-  color: rgb(66, 65, 67);
-  margin: 0 0 10px 0;
-}
-
-.bar{
-  background-color: #f2f2f1;
-  width: 100%;
-  height: 20px;
-  margin-bottom: 20px;
-}
-
-.bar-inner{
-  background-color: var(--success);
-  width: 0%;
-  height: 100%;
-  position: relative;
-}
-
-.bar-inner:hover{
-  background-color: var(--info);
-  transition: all .2s;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  -ms-transition: all .2s;
-  -o-transition: all .2s;
-}
-
-.bar-inner:after{
-  opacity: 0;
-  position: absolute;
-  right: 2.5%;
-  content: attr(data-percentage);
-  line-height: 20px;
-  color: #fff;
-  font-weight: 700;
-}
-
-.bar-share{
-  width: 0%;
-}
-
-.bar-engagement{
-  width: 0%;
-}
-
-.bar-people{
-  width: 0%;
-}
-
-.bar-brandLift{
-  width: 0%;
-}
-
-.bar-min{
-  width: 0%;
-}
-
-.bar-billion{
-  width: 0%;
-}
-
 .wings-box{
   min-height: 275px;
 }
@@ -13189,6 +13112,45 @@ textarea.form-control {
   }
 }
 
+.wrapper{
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.container-wrap{
+  width: 28vmin;
+  height: 30vmin;
+  display: flex;
+  flex-direction: column;
+  padding: 3em 0;
+  position: relative;
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+}
+
+span.num{
+  color: #000;
+  display: grid;
+  place-items: center;
+  font-size: 3em;
+}
+
+span.text{
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  padding: 0.7em 0;
+  font-weight: 700;
+  line-height: 1.2;
+  word-break: break-all;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   #office-map {
@@ -13211,6 +13173,32 @@ textarea.form-control {
 
   .work-section img{
     width: 250px!important;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .wrapper{
+    width: 90vw;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .container-wrap{
+    width: calc(50% - 40px);
+    height: 30vmin;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .wrapper{
+    gap: 15px;
+  }
+
+  .container-wrap{
+    width: 100%;
+    height: 25vmin;
+    font-size: 8px;
   }
 }
 
