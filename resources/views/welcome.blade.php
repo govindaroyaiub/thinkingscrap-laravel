@@ -15,6 +15,156 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <style>
+        .mpopup {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: transparent;
+            margin: auto;
+            padding: 0;
+            width: 600px;
+            /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            border-radius: 0.3rem;
+            border: none!important;
+        }
+
+        .modal-header {
+            padding: 2px 12px;
+            background-color: transparent;
+            /* color: #333; */
+            /* border-bottom: 1px solid #e9ecef; */
+            border-top-left-radius: 0.3rem;
+            border-top-right-radius: 0.3rem;
+            border-bottom: none!important;
+        }
+
+        .modal-header h2 {
+            font-size: 1.25rem;
+            margin-top: 14px;
+            margin-bottom: 14px;
+        }
+
+        .modal-body {
+            padding: 2px 12px;
+        }
+
+        .modal-footer {
+            padding: 1rem;
+            background-color: transparent;
+            /* color: #333; */
+            /* border-top: 1px solid #e9ecef; */
+            border-bottom-left-radius: 0.3rem;
+            border-bottom-right-radius: 0.3rem;
+            text-align: right;
+        }
+
+        .close {
+            color: red;
+            float: right;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .portfolio-item img {
+            padding-bottom: 10px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* add animation effects */
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .modal-content {
+                width: 80%;
+                margin: 15px auto;
+                padding: 20px;
+
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            .modal-content {
+                width: 80%;
+                margin: 15px auto;
+                padding: 20px;
+
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            .modal-content {
+                width: 80%;
+                margin: 15px auto;
+                padding: 20px;
+
+            }
+        }
+
+        @media only screen and (min-width: 992px) {
+            .modal-content {
+                width: 40%;
+                margin: 15px auto;
+                padding: 20px;
+
+            }
+        }
+
+        @media only screen and (min-width: 1200px) {
+            .modal-content {
+                width: 40%;
+                margin: 15px auto;
+                padding: 20px;
+
+            }
+        }
+
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -26,7 +176,7 @@
     <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="assets/imgs/logo.png" alt="logo" style="width: 100%; max-width: 250px; min-width: 160px;">
+                <img src="{{ asset('assets/imgs/logo2.png') }}" alt="logo" style="width: 100%; max-width: 250px; min-width: 160px;">
             </a>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -65,7 +215,8 @@
     <!-- Page Header -->
     <header class="header" id="header">
         <div class="overlay" style="text-transform: uppercase; text-align: center;">
-            <div id="title" style="display: flex; flex-direction: row; justify-content: space-around; transform: translateY(30px); opacity: 0; padding-left: 30px; padding-right: 30px; margin-left: auto; margin-right: auto;">
+            <div id="title"
+                style="display: flex; flex-direction: row; justify-content: space-around; transform: translateY(30px); opacity: 0; padding-left: 30px; padding-right: 30px; margin-left: auto; margin-right: auto;">
                 <i class="ti-quote-left" aria-hidden="true"></i>
                 <h1 class="title" style="text-shadow: 0 0 10px #555;">
                     An idea is formed by little scraps
@@ -74,7 +225,8 @@
             </div>
 
             {{-- <h1 class="title" style="transform: translateY(30px); opacity: 0;">says Thinking Scrap</h1> --}}
-            <h1 class="subtitle" style="transform: scale(.5); opacity: 0; text-shadow: 0 0 10px #555;">- says Thinking Scrap</h1>
+            <h1 class="subtitle" style="transform: scale(.5); opacity: 0; text-shadow: 0 0 10px #555;">- says
+                Thinking Scrap</h1>
         </div>
         <div class="shape">
             <svg viewBox="0 0 1500 200">
@@ -318,91 +470,142 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
-                        <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
-                        <div class="card-body">                         
+                        <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image"
+                            style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">
                             <h6 class="card-title">Black Forest Resort</h6>
                             <p>Fuga quae ratione inventore Perferendis porro.</p>
-                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                            <a href="javascript:void(0)" class="small text-muted"
+                                style="position: absolute; bottom: 10px; text-decoration: underline;"
+                                id="mpopupLink">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal popup box -->
+                <div id="mpopupBox" class="mpopup">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">×</span>
+                        </div>
+                        <div class="modal-body">
+                            <div class="portfolio-item"
+                                style="display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
+                                <img src="{{ asset('assets/imgs/web-1.jpg') }}" class="img-fluid" alt="image" width="300"
+                                    height="auto">
+                                <img src="{{ asset('assets/imgs/advertising-2.jpg') }}" class="img-fluid" alt="image" width="500"
+                                    height="auto">
+                                <img src="{{ asset('assets/imgs/web-1.jpg') }}" class="img-fluid" alt="image" width="300"
+                                    height="auto">
+                                <img src="{{ asset('assets/imgs/advertising-2.jpg') }}" class="img-fluid" alt="image" width="500"
+                                    height="auto">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
-                        <img src="{{ asset('assets/clients/Brac.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
-                        <div class="card-body">                         
+                        <img src="{{ asset('assets/clients/Brac.png') }}" alt="image"
+                            style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">
                             <h6 class="card-title">BRAC - Shomotontro</h6>
-                            <p>We, as Event partner, collaborated with Gender, Justice and Diversity Programme of Brac, to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope Festival 2023, regarding the equality and equity of gender discrimination we face in our day-to-day life in our society.</p>
-                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                            <p>We, as Event partner, collaborated with Gender, Justice and Diversity Programme of Brac,
+                                to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope
+                                Festival 2023, regarding the equality and equity of gender discrimination we face in our
+                                day-to-day life in our society.</p>
+                            <a href="javascript:void(0)" class="small text-muted"
+                                style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
-                        <img src="{{ asset('assets/clients/Bkash.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
-                        <div class="card-body">                         
+                        <img src="{{ asset('assets/clients/Bkash.png') }}" alt="image"
+                            style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">
                             <h6 class="card-title">Bkash</h6>
                             <p>Brand promotion through 'Quiz Master', an online quiz campaign in Bkash app.</p>
-                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                            <a href="javascript:void(0)" class="small text-muted"
+                                style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
-                        <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
-                        <div class="card-body">                         
+                        <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image"
+                            style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">
                             <h6 class="card-title">International Bilingual Learning Center</h6>
                             <p>Caving pathway through Logo branding and engaging educators through brand promotion.</p>
-                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                            <a href="javascript:void(0)" class="small text-muted"
+                                style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
-                        <img src="{{ asset('assets/clients/Amira.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
-                        <div class="card-body">                         
+                        <img src="{{ asset('assets/clients/Amira.png') }}" alt="image"
+                            style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">
                             <h6 class="card-title">Amira</h6>
-                            <p>Brand promotion through digital content, campaign,production and social media engagement.</p>
-                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                            <p>Brand promotion through digital content, campaign,production and social media engagement.
+                            </p>
+                            <a href="javascript:void(0)" class="small text-muted"
+                                style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
-                        <img src="{{ asset('assets/clients/BGCCI.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
-                        <div class="card-body">                         
+                        <img src="{{ asset('assets/clients/BGCCI.png') }}" alt="image"
+                            style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">
                             <h6 class="card-title">BGCCI</h6>
-                            <p>Promoted the brand through publications. And production of AV to celebrate 50 Years of Bangladesh-Germany Bilateral Relations.</p>
-                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                            <p>Promoted the brand through publications. And production of AV to celebrate 50 Years of
+                                Bangladesh-Germany Bilateral Relations.</p>
+                            <a href="javascript:void(0)" class="small text-muted"
+                                style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
-                        <img src="{{ asset('assets/clients/UNDP.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
-                        <div class="card-body">                         
+                        <img src="{{ asset('assets/clients/Undp.png') }}" alt="image"
+                            style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">
                             <h6 class="card-title">UNDP</h6>
-                            <p>Participated in the Youth Against Corruption campaign as an event partner with UNDP to sensitize young people regarding corruption and promote anti-corruption awareness and advocacy.</p>
-                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                            <p>Participated in the Youth Against Corruption campaign as an event partner with UNDP to
+                                sensitize young people regarding corruption and promote anti-corruption awareness and
+                                advocacy.</p>
+                            <a href="javascript:void(0)" class="small text-muted"
+                                style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
-                        <img src="{{ asset('assets/clients/Basundhara.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
-                        <div class="card-body">                         
+                        <img src="{{ asset('assets/clients/Basundhara.png') }}" alt="image"
+                            style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">
                             <h6 class="card-title">Bashundhara Group</h6>
-                            <p>Promoted the brand by providing creative suppport on digital contents, souvenir design, press ads. In addition, printing of press ad, and souvenirs assured the partnership we have with the brand.</p>
-                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                            <p>Promoted the brand by providing creative suppport on digital contents, souvenir design,
+                                press ads. In addition, printing of press ad, and souvenirs assured the partnership we
+                                have with the brand.</p>
+                            <a href="javascript:void(0)" class="small text-muted"
+                                style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; height: 425px;">
-                        <img src="{{ asset('assets/clients/Forest-lounge.png') }}" alt="image" style="width: 250px; margin: 15px auto;">
-                        <div class="card-body">                         
+                        <img src="{{ asset('assets/clients/Forest-lounge.png') }}" alt="image"
+                            style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">
                             <h6 class="card-title">The Forrest Lounge</h6>
-                            <p>Promoted the brand through product photography, production of creative designs and digital contents for social media platforms.</p>
-                            <a href="javascript:void(0)" class="small text-muted" style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
+                            <p>Promoted the brand through product photography, production of creative designs and
+                                digital contents for social media platforms.</p>
+                            <a href="javascript:void(0)" class="small text-muted"
+                                style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
                     </div>
                 </div>
@@ -514,7 +717,7 @@
     <!-- End of Blog Section -->
 
     <!-- Testmonial Section -->
-    <section class="section" id="quotes">
+    {{-- <section class="section" id="quotes">
         <div class="container">
             <h6 class="section-title text-center mb-0">Quotes</h6>
             <h6 class="section-subtitle mb-5 text-center"></h6>
@@ -566,128 +769,128 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- End of Testmonial Section -->
 
     <!-- Clients Section -->
-    <section class="section" id="clients">
+    <section class="section" id="clients" style="background-color: rgb(254, 207, 127);">
         <div class="container">
             <h6 class="section-title text-center mb-0">Our Clients</h6>
             <h6 class="section-subtitle mb-5 text-center"></h6>
             <div class="relative" style="position: relative;">
                 <div class="owl-carousel client-carousel">
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Abrar.png" alt="abrar" width="210"
+                        <img class="client-image" src="assets/clients/Abrar.png" alt="abrar" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Amira.png" alt="amira" width="210"
+                        <img class="client-image" src="assets/clients/Amira.png" alt="amira" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Basundhara.png" alt="Basundhara" width="210"
+                        <img class="client-image" src="assets/clients/Basundhara.png" alt="Basundhara" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/BGCCI.png" alt="BGCCI" width="210"
+                        <img class="client-image" src="assets/clients/BGCCI.png" alt="BGCCI" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Bkash.png" alt="Bkash" width="210"
+                        <img class="client-image" src="assets/clients/Bkash.png" alt="Bkash" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Bosphorus.png" alt="Bosphorus" width="210"
+                        <img class="client-image" src="assets/clients/Bosphorus.png" alt="Bosphorus" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Brac.png" alt="Brac" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Brac.png" alt="Brac" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/C_zar.png" alt="C_zar" width="210"
+                        <img class="client-image" src="assets/clients/C_zar.png" alt="C_zar" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Carbrorellaor.png" alt="Carbrorellaor" width="210"
+                        <img class="client-image" src="assets/clients/Carbrorellaor.png" alt="Carbrorellaor" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/CM.png" alt="CM" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/CM.png" alt="CM" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Dark-Burg.png" alt="Dark-Burg" width="210"
+                        <img class="client-image" src="assets/clients/Dark-Burg.png" alt="Dark-Burg" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Doict.png" alt="Doict" width="210"
+                        <img class="client-image" src="assets/clients/Doict.png" alt="Doict" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Dreamweave.png" alt="Dreamweave" width="210"
+                        <img class="client-image" src="assets/clients/Dreamweave.png" alt="Dreamweave" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/easytrax.png" alt="easytrax" width="210"
+                        <img class="client-image" src="assets/clients/easytrax.png" alt="easytrax" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/Fantasy-island.png" alt="Fantasy-island"
-                            width="210" height="auto" />
+                            width="150" height="auto" />
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/Food-and-flavours.png" alt="Food-and-flavours"
-                            width="210" height="auto" />
+                            width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Forest-lounge.png" alt="Forest-lounge" width="210"
+                        <img class="client-image" src="assets/clients/Forest-lounge.png" alt="Forest-lounge" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Humba-hat.png" alt="Humba-hat" width="210"
+                        <img class="client-image" src="assets/clients/Humba-hat.png" alt="Humba-hat" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Medimete.png" alt="Medimete" width="210"
+                        <img class="client-image" src="assets/clients/Medimete.png" alt="Medimete" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Nairobi.png" alt="Nairobi" width="210"
+                        <img class="client-image" src="assets/clients/Nairobi.png" alt="Nairobi" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Omera.png" alt="Omera" width="210"
+                        <img class="client-image" src="assets/clients/Omera.png" alt="Omera" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Phr.png" alt="Phr" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Phr.png" alt="Phr" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/RR.png" alt="RR" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/RR.png" alt="RR" width="150" height="auto" />
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/Save-the-children.png" alt="Save-the-children"
-                            width="210" height="auto" />
+                            width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Tapout.png" alt="Tapout" width="210"
+                        <img class="client-image" src="assets/clients/Tapout.png" alt="Tapout" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Thai.png" alt="Thai" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Thai.png" alt="Thai" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Tracker.png" alt="Tracker" width="210"
+                        <img class="client-image" src="assets/clients/Tracker.png" alt="Tracker" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Undp.png" alt="Undp" width="210" height="auto" />
+                        <img class="client-image" src="assets/clients/Undp.png" alt="Undp" width="150" height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Winger.png" alt="Winger" width="210"
+                        <img class="client-image" src="assets/clients/Winger.png" alt="Winger" width="150"
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Wood-peacker.png" alt="Wood-peacker" width="210"
+                        <img class="client-image" src="assets/clients/Wood-peacker.png" alt="Wood-peacker" width="150"
                             height="auto" />
                     </div>
                 </div>
@@ -708,7 +911,8 @@
     <section id="contact" class="section has-img-bg pb-0">
         <div class="container" style="text-align: center;">
             <h3>Where Are We Located?</h3>
-                <div id="map" style="overflow: hidden;"><img id="office-map" src="{{ asset('assets/imgs/Location.jpg') }}" alt="office-map">
+            <div id="map" style="overflow: hidden;"><img id="office-map" src="{{ asset('assets/imgs/Location.jpg') }}"
+                    alt="office-map">
             </div>
         </div>
         <br>
@@ -789,6 +993,34 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script>
+        // Select modal
+        var mpopup = document.getElementById('mpopupBox');
+
+        // Select trigger link
+        var mpLink = document.getElementById("mpopupLink");
+
+        // Select close action element
+        var close = document.getElementsByClassName("close")[0];
+
+        // Open modal once the link is clicked
+        mpLink.onclick = function () {
+            mpopup.style.display = "block";
+        };
+
+        // Close modal once close element is clicked
+        close.onclick = function () {
+            mpopup.style.display = "none";
+        };
+
+        // Close modal when user clicks outside of the modal box
+        window.onclick = function (event) {
+            if (event.target == mpopup) {
+                mpopup.style.display = "none";
+            }
+        };
+
+    </script>
     <script>
         $(window).scroll(function () {
             var top_of_element = $("#opportunity").offset().top;
@@ -887,20 +1119,20 @@
             const tl = gsap.timeline();
 
             tl
-            .add('f1')
-            .to('#title', {
-                duration: 1,
-                y: 0,
-                opacity: 1,
-                ease: 'power2.out',
-                stagger: 0.5
-            }, 'f1')
-            .to('.subtitle', {
-                duration: 0.75,
-                scale: 1,
-                opacity: 1,
-                ease: 'power2.out'
-            }, 'f1+=0.5')
+                .add('f1')
+                .to('#title', {
+                    duration: 1,
+                    y: 0,
+                    opacity: 1,
+                    ease: 'power2.out',
+                    stagger: 0.5
+                }, 'f1')
+                .to('.subtitle', {
+                    duration: 0.75,
+                    scale: 1,
+                    opacity: 1,
+                    ease: 'power2.out'
+                }, 'f1+=0.5')
         };
 
         function scrollFunction() {
@@ -942,7 +1174,7 @@
                                 Swal.showLoading()
                                 const b = Swal.getHtmlContainer().querySelector('b')
                                 timerInterval = setInterval(() => {
-                                b.textContent = Swal.getTimerLeft()
+                                    b.textContent = Swal.getTimerLeft()
                                 }, 100)
                             },
                             willClose: () => {
