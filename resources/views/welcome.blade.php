@@ -164,7 +164,14 @@
             }
         }
 
-        #bracmore {
+        #bracmore, 
+        #bfrmore,
+        #bosphorusmore,
+        #amiramore,
+        #bgccimore,
+        #undpmore,
+        #bashundharagroupmore,
+        #forestloungemore {
             display: none;
         }
 
@@ -375,14 +382,16 @@
             <h6 class="section-title mb-0 text-center">Our Works</h6>
             <h6 class="section-subtitle mb-5 text-center"></h6>
 
-            <div class="row">
+            <div class="row" style="display: flex; justify-content: center; align-items: center;">
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
-                            <h6 class="card-title">Black Forest Resort</h6>
-                            <p>Fuga quae ratione inventore Perferendis porro.</p>
+                            <h6 class="card-title">Bosphorus</h6>
+                            <p>We are promoting this premium restaurant which is slowly making its way forward <span id="bosphorusdots">...</span>
+                            <span id="bosphorusmore">to be one of the best coffee shop in town, through digital content, digital 
+                            engagement, campaign, brand promotion,  print & production.</span><a href="javascript:void(0)" onclick="revealbosphorusmore()" id="revealbosphorusmore" style="color:rgb(152, 17, 10)">Read more</a></p></p></p>
                             <a href="javascript:void(0)" class="small text-muted"
                                 style="position: absolute; bottom: 10px; text-decoration: underline;"
                                 id="mpopupLink">See Our Work</a>
@@ -413,12 +422,27 @@
                 </div>
                 <div class="col-md-4">
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
+                        <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image"
+                            style="width: 250px; margin: 15px auto;">
+                        <div class="card-body">
+                            <h6 class="card-title">Black Forest Resort</h6>
+                            <p>We are promoting this exotic resort which is slowly making its way forward <span id="bfrdots">...</span>
+                                <span id="bfrmore">to be one of the best eco-tourism resort in Bangladesh, through digital content, digital 
+                                enagagement, and brand promotion.</span><a href="javascript:void(0)" onclick="revealbfrmore()" id="revealbfrmore" style="color:rgb(152, 17, 10)">Read more</a></p></p>
+                            <a href="javascript:void(0)" class="small text-muted"
+                                style="position: absolute; bottom: 10px; text-decoration: underline;"
+                                id="mpopupLink">See Our Work</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Brac.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
                             <h6 class="card-title">BRAC - Shomotontro</h6>
-                            <p>We, as Event partner, collaborated with Gender, Justice and Diversity Programme of Brac<span id="bracdots">...</span>
-                                <span id="bracmore"> to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope
+                            <p>We, as Event partner, collaborated with Gender, Justice and Diversity Programme <span id="bracdots">...</span>
+                                <span id="bracmore">of Brac to create awareness amongst mass people through Dhaka List Fest 2023 and BRAC Hope
                                 Festival 2023, regarding the equality and equity of gender discrimination we face in our
                                 day-to-day life in our society.</span><a href="javascript:void(0)" onclick="revealbracmore()" id="revealbracmore" style="color:rgb(152, 17, 10)">Read more</a></p>
                             <a href="javascript:void(0)" class="small text-muted"
@@ -456,7 +480,8 @@
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
                             <h6 class="card-title">Amira</h6>
-                            <p>Brand promotion through digital content, campaign,production and social media engagement.
+                            <p>Brand promotion through digital content, campaign,production and <span id="amiradots">...</span>
+                                <span id="amiramore">social media engagement.</span><a href="javascript:void(0)" onclick="revealamiramore()" id="revealamiramore" style="color:rgb(152, 17, 10)">Read more</a></p>
                             </p>
                             <a href="javascript:void(0)" class="small text-muted"
                                 style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
@@ -469,8 +494,8 @@
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
                             <h6 class="card-title">BGCCI</h6>
-                            <p>Promoted the brand through publications. And production of AV to celebrate 50 Years of
-                                Bangladesh-Germany Bilateral Relations.</p>
+                            <p>Promoted the brand through publications. And production of AV to celebrate <span id="bgccidots">...</span>
+                                <span id="bgccimore">50 Years of Bangladesh-Germany Bilateral Relations.</span><a href="javascript:void(0)" onclick="revealbgccimore()" id="revealbgccimore" style="color:rgb(152, 17, 10)">Read more</a></p>
                             <a href="javascript:void(0)" class="small text-muted"
                                 style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
@@ -482,9 +507,9 @@
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
                             <h6 class="card-title">UNDP</h6>
-                            <p>Participated in the Youth Against Corruption campaign as an event partner with UNDP to
-                                sensitize young people regarding corruption and promote anti-corruption awareness and
-                                advocacy.</p>
+                            <p>Participated in the Youth Against Corruption campaign as an event partner <span id="undpdots">...</span>
+                                <span id="undpmore">with UNDP to sensitize young people regarding corruption and promote anti-corruption awareness and
+                                advocacy.</span><a href="javascript:void(0)" onclick="revealundpmore()" id="revealundpmore" style="color:rgb(152, 17, 10)">Read more</a></p>
                             <a href="javascript:void(0)" class="small text-muted"
                                 style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
@@ -496,9 +521,9 @@
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
                             <h6 class="card-title">Bashundhara Group</h6>
-                            <p>Promoted the brand by providing creative suppport on digital contents, souvenir design,
-                                press ads. In addition, printing of press ad, and souvenirs assured the partnership we
-                                have with the brand.</p>
+                            <p>Promoted the brand by providing creative suppport on digital contents, <span id="bashundharagroupdots">...</span>
+                                <span id="bashundharagroupmore">souvenir design, press ads. In addition, printing of press ad, and souvenirs assured the partnership we
+                                have with the brand.</span><a href="javascript:void(0)" onclick="revealbashundharagroupmore()" id="revealbashundharagroupmore" style="color:rgb(152, 17, 10)">Read more</a></p>
                             <a href="javascript:void(0)" class="small text-muted"
                                 style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
@@ -510,8 +535,9 @@
                             style="width: 250px; margin: 15px auto;">
                         <div class="card-body">
                             <h6 class="card-title">The Forrest Lounge</h6>
-                            <p>Promoted the brand through product photography, production of creative designs and
-                                digital contents for social media platforms.</p>
+                            <p>Promoted the brand through product photography, production <span id="forestloungedots">...</span>
+                                <span id="forestloungemore">of creative designs and digital contents 
+                                for social media platforms.</span><a href="javascript:void(0)" onclick="revealforestloungemore()" id="revealforestloungemore" style="color:rgb(152, 17, 10)">Read more</a></p>
                             <a href="javascript:void(0)" class="small text-muted"
                                 style="position: absolute; bottom: 10px; text-decoration: underline;">See Our Work</a>
                         </div>
@@ -926,7 +952,112 @@
                 moreText.style.display = "none";
             } else {
                 dots.style.display = "none";
-                btnText.innerHTML = "Read less";
+                btnText.innerHTML = " Read less";
+                moreText.style.display = "inline";
+            }
+        }
+        function revealbfrmore() {
+            var dots = document.getElementById("bfrdots");
+            var moreText = document.getElementById("bfrmore");
+            var btnText = document.getElementById("revealbfrmore");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = " Read less";
+                moreText.style.display = "inline";
+            }
+        }
+        function revealbosphorusmore() {
+            var dots = document.getElementById("bosphorusdots");
+            var moreText = document.getElementById("bosphorusmore");
+            var btnText = document.getElementById("revealbosphorusmore");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = " Read less";
+                moreText.style.display = "inline";
+            }
+        }
+        function revealamiramore() {
+            var dots = document.getElementById("amiradots");
+            var moreText = document.getElementById("amiramore");
+            var btnText = document.getElementById("revealamiramore");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = " Read less";
+                moreText.style.display = "inline";
+            }
+        }
+        function revealbgccimore() {
+            var dots = document.getElementById("bgccidots");
+            var moreText = document.getElementById("bgccimore");
+            var btnText = document.getElementById("revealbgccimore");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = " Read less";
+                moreText.style.display = "inline";
+            }
+        }
+        function revealundpmore() {
+            var dots = document.getElementById("undpdots");
+            var moreText = document.getElementById("undpmore");
+            var btnText = document.getElementById("revealundpmore");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = " Read less";
+                moreText.style.display = "inline";
+            }
+        }
+        function revealbashundharagroupmore() {
+            var dots = document.getElementById("bashundharagroupdots");
+            var moreText = document.getElementById("bashundharagroupmore");
+            var btnText = document.getElementById("revealbashundharagroupmore");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = " Read less";
+                moreText.style.display = "inline";
+            }
+        }
+        function revealforestloungemore() {
+            var dots = document.getElementById("forestloungedots");
+            var moreText = document.getElementById("forestloungemore");
+            var btnText = document.getElementById("revealforestloungemore");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = " Read less";
                 moreText.style.display = "inline";
             }
         }
