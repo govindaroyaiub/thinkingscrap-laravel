@@ -350,7 +350,7 @@
             <h6 class="section-subtitle text-center mb-5 pb-3">Services We Provide.</h6>
 
             <div class="row">
-                <div class="col-md-4" >
+                <div class="col-md-4" style="margin-top: 10px;">
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">01</small>
@@ -365,7 +365,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" style="margin-top: 10px;">
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">02</small>
@@ -377,7 +377,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" style="margin-top: 10px;">
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">03</small>
@@ -390,10 +390,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" style="margin-top: 10px;">
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">04</small>
@@ -404,7 +401,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" style="margin-top: 10px;">
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">05</small>
@@ -416,7 +413,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" style="margin-top: 10px;">
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">06</small>
@@ -426,10 +423,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" style="margin-top: 10px;">
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">07</small>
@@ -440,7 +434,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" style="margin-top: 10px;">
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">08</small>
@@ -451,7 +445,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" style="margin-top: 10px;">
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold">09</small>
@@ -463,6 +457,7 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
     <!-- End OF Service Section -->
