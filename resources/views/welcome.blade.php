@@ -294,7 +294,7 @@
         <br>
         <div class="container">
             <h6 class="section-title text-center" style="color: rgb(152, 17, 10); text-align: center;">Window Of Opportunity</h6>
-            <h6 class="section-subtitle text-center mb-5 pb-3"></h6>
+            {{-- <h6 class="section-subtitle text-center mb-5 pb-3"></h6> --}}
 
             <div class="wrapper">
                 <div class="container-wrap">
