@@ -730,10 +730,6 @@
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Doict.png" alt="Doict" width="150"
-                            height="auto" />
-                    </div>
-                    <div class="item">
                         <img class="client-image" src="assets/clients/Dreamweave.png" alt="Dreamweave" width="150"
                             height="auto" />
                     </div>
@@ -762,10 +758,6 @@
                             height="auto" />
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Nairobi.png" alt="Nairobi" width="150"
-                            height="auto" />
-                    </div>
-                    <div class="item">
                         <img class="client-image" src="assets/clients/Omera.png" alt="Omera" width="150"
                             height="auto" />
                     </div>
@@ -774,10 +766,6 @@
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/RR.png" alt="RR" width="150" height="auto" />
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Save-the-children.png" alt="Save-the-children"
-                            width="150" height="auto" />
                     </div>
                     <div class="item">
                         <img class="client-image" src="assets/clients/Tapout.png" alt="Tapout" width="150"
