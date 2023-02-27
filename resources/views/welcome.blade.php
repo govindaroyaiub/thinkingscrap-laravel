@@ -365,7 +365,7 @@
             <div class="row">
                 <?php $i = 1; ?>
                 @foreach ($wingsData as $row)
-                <div class="col-md-4" style="margin-top: 10px;">
+                <div class="col-md-4 wings">
                     <div class="card mb-4 mb-md-0 wings-box" style="border-radius: 10px; background-color: #f5ba56;">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold"> {{ sprintf('%02d', $i++) }} </small>
