@@ -350,114 +350,19 @@
             <h6 class="section-subtitle text-center mb-5 pb-3">Services We Provide.</h6>
 
             <div class="row">
+                <?php $i = 1; ?>
+                @foreach ($wingsData as $row)
                 <div class="col-md-4" style="margin-top: 10px;">
                     <div class="card mb-4 mb-md-0 wings-box">
                         <div class="card-body">
-                            <small class="text-primary font-weight-bold">01</small>
-                            <h5 class="card-title mt-3"> Digital Marketing <h5>
-                                    <p class="mb-0">Digital marketing is any form of marketing that involves electronic
-                                        devices. It can be done online
-                                        and offline, and in fact, both kinds are important for a well-rounded Digital
-                                        Marketing Strategy.
-                                        We provide 360° Digital Marketing support with proper research, to ensure higher
-                                        ROI and
-                                        Conversion Rate.</p>
+                            <small class="text-primary font-weight-bold"> {{ sprintf('%02d', $i++) }} </small>
+                            <h5 class="card-title mt-3"> {{ $row->name }} <h5>
+                                    <p class="mb-0">{{ $row->description }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" style="margin-top: 10px;">
-                    <div class="card mb-4 mb-md-0 wings-box">
-                        <div class="card-body">
-                            <small class="text-primary font-weight-bold">02</small>
-                            <h5 class="card-title mt-3">Media Buying<h5>
-                                    <p class="mb-0">Professional media buyers of our team ensure creative and accurately
-                                        targeted
-                                        brand ads, to secure maximum visibility of brands over different media
-                                        platforms.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style="margin-top: 10px;">
-                    <div class="card mb-4 mb-md-0 wings-box">
-                        <div class="card-body">
-                            <small class="text-primary font-weight-bold">03</small>
-                            <h5 class="card-title mt-3">Digital Conent Development<h5>
-                                    <p class="mb-0">Content Development makes brands more visible to potential consumers
-                                        who search for
-                                        relevant products online. Our content developers know exact Keywords and SEO
-                                        methods
-                                        needed for a brand.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style="margin-top: 10px;">
-                    <div class="card mb-4 mb-md-0 wings-box">
-                        <div class="card-body">
-                            <small class="text-primary font-weight-bold">04</small>
-                            <h5 class="card-title mt-3"> Video Commercial <h5>
-                                    <p class="mb-0">Experienced in-house production team to showcase your brand
-                                        creatively, to increase
-                                        Sales Conversion and Lead Generation.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style="margin-top: 10px;">
-                    <div class="card mb-4 mb-md-0 wings-box">
-                        <div class="card-body">
-                            <small class="text-primary font-weight-bold">05</small>
-                            <h5 class="card-title mt-3">SEO<h5>
-                                    <p class="mb-0">Search engine optimization (SEO) is the process of improving the
-                                        quality and
-                                        quantity of website traffic to a website or a web page from search engines. SEO
-                                        targets unpaid rather than direct traffic or paid traffic.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style="margin-top: 10px;">
-                    <div class="card mb-4 mb-md-0 wings-box">
-                        <div class="card-body">
-                            <small class="text-primary font-weight-bold">06</small>
-                            <h5 class="card-title mt-3">Product Photography<h5>
-                                    <p class="mb-0">Our Professional photography service enhances brand personality,
-                                        trust and perceived value.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style="margin-top: 10px;">
-                    <div class="card mb-4 mb-md-0 wings-box">
-                        <div class="card-body">
-                            <small class="text-primary font-weight-bold">07</small>
-                            <h5 class="card-title mt-3"> Event Managment <h5>
-                                    <p class="mb-0">With efficient use of budget with creative decoration, our
-                                        professional event
-                                        planner team makes personal or corporate events a success.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style="margin-top: 10px;">
-                    <div class="card mb-4 mb-md-0 wings-box">
-                        <div class="card-body">
-                            <small class="text-primary font-weight-bold">08</small>
-                            <h5 class="card-title mt-3">Web Solution<h5>
-                                    <p class="mb-0">We provide Web Solution through our expert developer team to provide
-                                        more
-                                        Lead, Credibility and better customer service to the brands.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style="margin-top: 10px;">
-                    <div class="card mb-4 mb-md-0 wings-box">
-                        <div class="card-body">
-                            <small class="text-primary font-weight-bold">09</small>
-                            <h5 class="card-title mt-3">PR Solution<h5>
-                                    <p class="mb-0">Accurate PR activities increase brand’s publicity and credibility.
-                                        We provide well crafted
-                                        PR solutions to support brands with maximum exposure across different media.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
-            
         </div>
     </section>
     <!-- End OF Service Section -->

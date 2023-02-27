@@ -8,6 +8,10 @@ use App\Models\Wing;
 
 class DashboardController extends Controller
 {
+    public function welcomePage(){
+        $wingsData = Wing::get();
+        return view('welcome', compact('wingsData'));
+    }
     public function messagesIndex(){
         $data = Contact::orderBy('created_at', 'DESC')->get();
         return view('messages', compact('data'));

@@ -25,9 +25,7 @@ Route::get('/clear-cache', function() {
     return '<h2 style="color: red;">Cache, View, Config, Route cleared!</h2>';
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [DashboardController::class, 'welcomePage'])->name('welcomePage');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
