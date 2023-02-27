@@ -175,6 +175,12 @@
             display: none;
         }
 
+        .owl-item{
+            display: flex;
+            align-items: center!important;
+            justify-content: center!important;
+        }
+
     </style>
 </head>
 
@@ -360,7 +366,7 @@
                 <?php $i = 1; ?>
                 @foreach ($wingsData as $row)
                 <div class="col-md-4" style="margin-top: 10px;">
-                    <div class="card mb-4 mb-md-0 wings-box">
+                    <div class="card mb-4 mb-md-0 wings-box" style="border-radius: 10px; background-color: #f5ba56;">
                         <div class="card-body">
                             <small class="text-primary font-weight-bold"> {{ sprintf('%02d', $i++) }} </small>
                             <h5 class="card-title mt-3"> {{ $row->name }} <h5>
@@ -714,106 +720,85 @@
             <div class="relative" style="position: relative;">
                 <div class="owl-carousel client-carousel">
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Abrar.png" alt="abrar" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Abrar.png" alt="abrar" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Amira.png" alt="amira" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Amira.png" alt="amira" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Basundhara.png" alt="Basundhara" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Basundhara.png" alt="Basundhara" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/BGCCI.png" alt="BGCCI" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/BGCCI.png" alt="BGCCI" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Bkash.png" alt="Bkash" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Bkash.png" alt="Bkash" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Bosphorus.png" alt="Bosphorus" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Bosphorus.png" alt="Bosphorus" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Brac.png" alt="Brac" width="150" height="auto" />
+                        <img class="client-image" src="assets/clients/Brac.png" alt="Brac" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/C_zar.png" alt="C_zar" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/C_zar.png" alt="C_zar" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Carbrorellaor.png" alt="Carbrorellaor" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Carbrorellaor.png" alt="Carbrorellaor" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/CM.png" alt="CM" width="150" height="auto" />
+                        <img class="client-image" src="assets/clients/CM.png" alt="CM" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Dark-Burg.png" alt="Dark-Burg" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Dark-Burg.png" alt="Dark-Burg" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Dreamweave.png" alt="Dreamweave" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Dreamweave.png" alt="Dreamweave" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/easytrax.png" alt="easytrax" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/easytrax.png" alt="easytrax" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Fantasy-island.png" alt="Fantasy-island"
-                            width="150" height="auto" />
+                        <img class="client-image" src="assets/clients/Fantasy-island.png" alt="Fantasy-island" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Food-and-flavours.png" alt="Food-and-flavours"
-                            width="150" height="auto" />
+                        <img class="client-image" src="assets/clients/Food-and-flavours.png" alt="Food-and-flavours" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Forest-lounge.png" alt="Forest-lounge" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Forest-lounge.png" alt="Forest-lounge" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Humba-hat.png" alt="Humba-hat" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Humba-hat.png" alt="Humba-hat" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Medimete.png" alt="Medimete" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Medimete.png" alt="Medimete" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Omera.png" alt="Omera" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Omera.png" alt="Omera" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Phr.png" alt="Phr" width="150" height="auto" />
+                        <img class="client-image" src="assets/clients/Phr.png" alt="Phr" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/RR.png" alt="RR" width="150" height="auto" />
+                        <img class="client-image" src="assets/clients/RR.png" alt="RR" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Tapout.png" alt="Tapout" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Tapout.png" alt="Tapout" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Thai.png" alt="Thai" width="150" height="auto" />
+                        <img class="client-image" src="assets/clients/Thai.png" alt="Thai" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Tracker.png" alt="Tracker" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Tracker.png" alt="Tracker" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Undp.png" alt="Undp" width="150" height="auto" />
+                        <img class="client-image" src="assets/clients/Undp.png" alt="Undp" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Winger.png" alt="Winger" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Winger.png" alt="Winger" style="width: 160px; height: auto;"/>
                     </div>
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Wood-peacker.png" alt="Wood-peacker" width="150"
-                            height="auto" />
+                        <img class="client-image" src="assets/clients/Wood-peacker.png" alt="Wood-peacker" style="width: 160px; height: auto;"/>
                     </div>
                 </div>
                 <div class="my-owl-nav">
@@ -1064,6 +1049,40 @@
     </script>
     <script>
         var counter = true;
+
+        $(document).ready(function () {
+            var top_of_element = $("#opportunity").offset().top;
+            var bottom_of_element = $("#opportunity").offset().top + $("#opportunity").outerHeight();
+            var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+            var top_of_screen = $(window).scrollTop();
+
+            if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)) {
+                if(counter == true){
+                    let valueDisplays = document.querySelectorAll(".num");
+                    console.log(valueDisplays);
+                    let interval = 5000;
+                    valueDisplays.forEach((valueDisplay) => {
+                        let startValue = 0;
+                        let endValue = parseInt(valueDisplay.getAttribute
+                        ("data-val"));
+                        let duration= Math.floor(interval / endValue);
+                        let counter = setInterval(function () {
+                            startValue += 1;
+                            valueDisplay.textContent = startValue;
+                            if (startValue == endValue) {
+                                clearInterval(counter);
+                            }
+                        }, duration);
+                    });
+
+                    counter = false;
+                }
+                
+            } else {
+                // the element is not visible, do something else
+                // alert('no');
+            }
+        });
 
         $(window).scroll(function () {
             var top_of_element = $("#opportunity").offset().top;
