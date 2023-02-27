@@ -35,6 +35,11 @@ Route::get('/dashboard', function () {
 
 Route::get('/messages', [DashboardController::class, 'messagesIndex'])->middleware(['auth', 'verified'])->name('messages');
 Route::get('/wings', [DashboardController::class, 'wingsIndex'])->middleware(['auth', 'verified'])->name('wings');
+Route::get('/wings/add-new', [DashboardController::class, 'wingsAddNew'])->middleware(['auth', 'verified'])->name('wingsAddNew');
+Route::post('/wings/add-new', [DashboardController::class, 'wingsAddNewPost'])->middleware(['auth', 'verified'])->name('wingsAddNewPost');
+Route::get('/wings/edit/{id}', [DashboardController::class, 'wingsEditIndex'])->middleware(['auth', 'verified'])->name('wingsEditIndex');
+Route::post('/wings/edit/{id}', [DashboardController::class, 'wingsEditPost'])->middleware(['auth', 'verified'])->name('wingsEditPost');
+Route::get('/wings/delete/{id}', [DashboardController::class, 'wingsDelete'])->middleware(['auth', 'verified'])->name('wingsDelete');
 Route::get('/clients', [DashboardController::class, 'clientsIndex'])->middleware(['auth', 'verified'])->name('clients');
 
 Route::post('/contactStore', [DashboardController::class, 'contactStore'])->name('contactStore');

@@ -10,23 +10,32 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 antialiased">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <a href="/wings/add-new" style="float: right; padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Add New</a>                
                 <div class="p-6 text-gray-900">
                     <table id="myTable">
                         <thead>
                             <tr>
+                                <th scope="col">#</th>
                                 <th scope="col">Name</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            
+                            <?php $i = 1 ?>
+                            @foreach ($data as $row)
                             <tr>
-                                <td data-label="Name"></td>
-                                <td data-label="Description"></td>
-                                <td data-label="Action"></td>
+                                <td data-label="Name">{{ $i++ }}</td>
+                                <td data-label="Name">{{ $row->name }}</td>
+                                <td data-label="Description">{{ $row->description }}</td>
+                                <td data-label="Action">
+                                    <div class="flex">
+                                        <a href="/wings/edit/{{ $row->id }}" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Edit</a>     
+                                        <a href="/wings/delete/{{ $row->id }}" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Delete</a>     
+                                    </div>
+                                </td>
                             </tr>
-                            
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
