@@ -719,87 +719,12 @@
             <h6 class="section-subtitle mb-5 text-center"></h6>
             <div class="relative" style="position: relative;">
                 <div class="owl-carousel client-carousel">
+                    @foreach ($clientsData as $client)
                     <div class="item">
-                        <img class="client-image" src="assets/clients/Abrar.png" alt="abrar" style="width: 160px; height: auto;"/>
+                        <img class="client-image" src="{{ asset('client_images/'.$client->path) }}" alt="{{ $client->name }}" style="width: 160px; height: auto;"/>
                     </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Amira.png" alt="amira" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Basundhara.png" alt="Basundhara" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/BGCCI.png" alt="BGCCI" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Bkash.png" alt="Bkash" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Bosphorus.png" alt="Bosphorus" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Brac.png" alt="Brac" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/C_zar.png" alt="C_zar" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Carbrorellaor.png" alt="Carbrorellaor" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/CM.png" alt="CM" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Dark-Burg.png" alt="Dark-Burg" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Dreamweave.png" alt="Dreamweave" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/easytrax.png" alt="easytrax" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Fantasy-island.png" alt="Fantasy-island" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Food-and-flavours.png" alt="Food-and-flavours" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Forest-lounge.png" alt="Forest-lounge" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Humba-hat.png" alt="Humba-hat" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Medimete.png" alt="Medimete" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Omera.png" alt="Omera" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Phr.png" alt="Phr" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/RR.png" alt="RR" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Tapout.png" alt="Tapout" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Thai.png" alt="Thai" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Tracker.png" alt="Tracker" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Undp.png" alt="Undp" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Winger.png" alt="Winger" style="width: 160px; height: auto;"/>
-                    </div>
-                    <div class="item">
-                        <img class="client-image" src="assets/clients/Wood-peacker.png" alt="Wood-peacker" style="width: 160px; height: auto;"/>
-                    </div>
+                    @endforeach
+                   
                 </div>
                 <div class="my-owl-nav">
                     <span class="my-owl-button my-prev-button">

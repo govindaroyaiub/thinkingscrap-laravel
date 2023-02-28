@@ -39,6 +39,11 @@ Route::get('/wings/edit/{id}', [DashboardController::class, 'wingsEditIndex'])->
 Route::post('/wings/edit/{id}', [DashboardController::class, 'wingsEditPost'])->middleware(['auth', 'verified'])->name('wingsEditPost');
 Route::get('/wings/delete/{id}', [DashboardController::class, 'wingsDelete'])->middleware(['auth', 'verified'])->name('wingsDelete');
 Route::get('/clients', [DashboardController::class, 'clientsIndex'])->middleware(['auth', 'verified'])->name('clients');
+Route::get('/clients/add-new', [DashboardController::class, 'clientsAddNew'])->middleware(['auth', 'verified'])->name('clientsAddNew');
+Route::post('/clients/add-new', [DashboardController::class, 'clientsAddNewPost'])->middleware(['auth', 'verified'])->name('clientsAddNewPost');
+Route::get('/clients/edit/{id}', [DashboardController::class, 'clientsEditIndex'])->middleware(['auth', 'verified'])->name('clientsEditIndex');
+Route::post('/clients/edit/{id}', [DashboardController::class, 'clientsEditPost'])->middleware(['auth', 'verified'])->name('clientsEditPost');
+Route::get('/clients/delete/{id}', [DashboardController::class, 'clientsDelete'])->middleware(['auth', 'verified'])->name('clientsDelete');
 
 Route::post('/contactStore', [DashboardController::class, 'contactStore'])->name('contactStore');
 

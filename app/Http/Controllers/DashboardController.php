@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\Wing;
+use App\Models\Client;
 
 class DashboardController extends Controller
 {
     public function welcomePage(){
         $wingsData = Wing::get();
-        return view('welcome', compact('wingsData'));
+        $clientsData = Client::get();
+        return view('welcome', compact('wingsData', 'clientsData'));
     }
     public function messagesIndex(){
         $data = Contact::orderBy('created_at', 'DESC')->get();
@@ -66,6 +68,75 @@ class DashboardController extends Controller
     }
 
     public function clientsIndex(){
-        return view('clients');
+        $data = Client::get();
+        return view('clients', compact('data'));
+    }
+
+    public function clientsAddNew(){
+        return view('clients_add_new');
+    }
+
+    public function clientsAddNewPost(Request $request){
+        $validatedData = $request->validate([
+            'logo' => 'required|image|mimes:jpg,png,jpeg,gif,svg'
+           ]);
+    
+            $name = $request->name;
+            $imageName = time().'.'.$request->logo->extension();  
+        
+            $request->logo->move(public_path('client_images'), $imageName);
+        
+            $client = new Client;
+            $client->name = $name;
+            $client->path = $imageName;
+            $client->save();
+
+        return redirect('/clients');
+    }
+
+    public function clientsEditIndex($id){
+        $data = Client::find($id);
+        return view('clients_edit', compact('data'));
+    }
+
+    public function clientsEditPost(Request $request, $id){
+        $validatedData = $request->validate([
+            'logo' => 'image|mimes:jpg,png,jpeg,gif,svg'
+        ]);
+
+        $data = Client::find($id);
+        $imageName = $data['path'];
+
+        if($request->logo != NULL){
+            if (file_exists('client_images/'.$imageName)) {
+                @unlink('client_images/'.$imageName);
+            }
+    
+            $name = $request->name;
+            $imageName = time().'.'.$request->logo->extension();  
+        
+            $request->logo->move(public_path('client_images'), $imageName);
+        }
+        
+        $newData = [
+            'name' => $request->name,
+            'path' => $imageName
+        ];
+
+        Client::where('id', $id)->update($newData);
+
+        return redirect('/clients');
+    }
+
+    public function clientsDelete($id){
+        $data = Client::find($id);
+        $imageName = $data['path'];
+
+        if (file_exists('client_images/'.$imageName)) {
+            @unlink('client_images/'.$imageName);
+        }
+
+        Client::where('id', $id)->delete();
+        return redirect('/clients');
     }
 }
