@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Wing extends Model
 {
     use HasFactory;
-
+    public $timestamps = true;
     protected $table = 'wings';
 }
