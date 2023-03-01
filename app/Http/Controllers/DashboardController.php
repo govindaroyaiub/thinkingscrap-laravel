@@ -6,13 +6,15 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\Wing;
 use App\Models\Client;
+use App\Models\Company;
 
 class DashboardController extends Controller
 {
     public function welcomePage(){
         $wingsData = Wing::get();
         $clientsData = Client::get();
-        return view('welcome', compact('wingsData', 'clientsData'));
+        $companyData = Company::where('name', 'Thinking Scrap')->first();
+        return view('welcome', compact('wingsData', 'clientsData', 'companyData'));
     }
     public function messagesIndex(){
         $data = Contact::orderBy('created_at', 'DESC')->get();

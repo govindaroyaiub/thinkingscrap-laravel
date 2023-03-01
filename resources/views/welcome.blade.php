@@ -264,14 +264,7 @@
                 <div class="col-md-6 pr-md-5 mb-4 mb-md-0">
                     {{-- <h6 class="section-title mb-0">About Us</h6> --}}
                     <h6 class="section-subtitle mb-4" style="font-size: 25px;">WHO WE ARE</h6>
-                    <label>The Digital world comes with many challenges and obstacles that are not easily
-                        tackled by just any mainstream organization, it takes innovative pioneers who
-                        combine creativity and professionalism with a hint of perseverance to come up
-                        with the most convenient Digital solutions. This is exactly what we “Thinking
-                        Scrap” provide to seekers of top-notch quality services and individuals or
-                        businesses who are eager for super convenient and efficient solutions. We
-                        analyze what a brand actually needs to stand out from the crowd. In a
-                        marketplace too noisy, brands need to be honest first than being loud.</label>
+                    <label>{{ $companyData['who_we_are'] }}</label>
                     <img src="{{ asset('assets/imgs/about_us_1.jpg') }}" alt="about_us" class="w-100 mt-3 shadow-sm">
                 </div>
                 <div class="col-md-6 pl-md-5">
@@ -284,15 +277,7 @@
                         </div>
                         <div class="col-12 mt-4">
                             <h6 class="section-subtitle mb-4" style="font-size: 25px;">WHAT WE DO</h6>
-                            <label>We as a team provide our 360-degree complete Digital solutions universally,
-                                we hope to reach out to many corners on the globe and create firm bonds
-                                with our customers in order to continue providing our outstanding services.
-                                We provide creative, strategic, and technical development of marketing
-                                products and services. We work together with our clients to build a better
-                                Brand with exciting marketing contents and value to their target customers.
-                                Our understanding of marketing products empowers us to bring a level of
-                                expertise to your company like no one else. We know how to build a Brand
-                                that can scale to your business needs on point.</label>
+                            <label>{{ $companyData['what_we_do'] }}</label>
                         </div>
                     </div>
                 </div>
@@ -752,13 +737,13 @@
             <div class="row align-items-center">
                 <div class="col-md-5 my-3">
                     <h6 class="mb-0">Phone</h6>
-                    <p class="mb-4">+880-1767696244</p>
+                    <p class="mb-4">{{ $companyData['phone'] }}</p>
 
                     <h6 class="mb-0">Address</h6>
-                    <p class="mb-4">8/15 Block #A, Lalmatia, Dhaka - 1205</p>
+                    <p class="mb-4">{{ $companyData['address'] }}</p>
 
                     <h6 class="mb-0">Email</h6>
-                    <p class="mb-0">info@thinkingscrap.com</p>
+                    <p class="mb-0">{{ $companyData['email'] }}</p>
                     <p></p>
                 </div>
                 <div class="col-md-7">
