@@ -10,6 +10,11 @@ use App\Models\Company;
 
 class DashboardController extends Controller
 {
+    public function dashboard(){
+        $data = Company::where('name', 'Thinking Scrap')->first();
+        return view('dashboard', compact('data'));
+    }
+
     public function welcomePage(){
         $wingsData = Wing::get();
         $clientsData = Client::get();
