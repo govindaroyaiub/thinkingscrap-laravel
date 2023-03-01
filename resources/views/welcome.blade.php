@@ -211,9 +211,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#works">Our Works</a>
                     </li>
-                    {{-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="#team">Team</a>
-                    </li> --}}
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#clients">Our Clients</a>
                     </li>
@@ -540,63 +540,32 @@
     <!-- End of works section -->
 
     <!-- Team Section -->
-    {{-- <section id="team" class="section pt-0">
-        <br>
+    <section id="team" class="section pt-0" style="background-color: rgb(255, 241, 215);">
         <br>
         <br>
         <div class="container">
             <h6 class="section-title text-center" style="color: rgb(152, 17, 10);">The Team</h6>
             <h6 class="text-center mb-5 pb-3">Our dedicated team where we can't think a second and work without them!
             </h6>
-            <div class="row">
-                <div class="col-md-4 mt-4 team-main">
-                    <div class="mb-4 mb-md-0">
-                        <div class="team-outer-rectangle">
-                            <div class="team-inner-rectangle">
-                                <div class="team-inner-div">
-                                    <img src="assets/imgs/avatar-1.jpg" alt="emp1" class="team-employee">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-rectangle">
-                            <label style="margin-top: 5px; text-transform: uppercase;">omuk chowdhury</label>
-                            <label style="text-transform: capitalize;">Lead Designer</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mt-4 team-main">
-                    <div class="mb-4 mb-md-0">
-                        <div class="team-outer-rectangle">
-                            <div class="team-inner-rectangle">
-                                <div class="team-inner-div">
-                                    <img src="assets/imgs/avatar-1.jpg" alt="emp1" class="team-employee">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-rectangle">
-                            <label style="margin-top: 5px; text-transform: uppercase;">shamsher singh</label>
-                            <label style="text-transform: capitalize;">Balle Paaji</label>
+            <div class="row flex py-5" style="align-content: center; align-items: center; justify-content: center;">
+
+                @foreach ($employeeData as $employee)
+                <div class="mt-4 py-2 px-4 employeetooltip employeeImage">
+                    <img class="size_of_img" src="{{ asset('employee_images/'.$employee->photo) }}" alt="Image 1" />
+                    <div class="tooltiptext">
+                        <span>"{{ $employee->statement }}"</span>
+                        <hr>
+                        <div class="block">
+                            <span>{{ $employee->designation }}</span>
+                            <br>
+                            <span>{{ $employee->department }}</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mt-4 team-main">
-                    <div class="mb-4 mb-md-0">
-                        <div class="team-outer-rectangle">
-                            <div class="team-inner-rectangle">
-                                <div class="team-inner-div">
-                                    <img src="assets/imgs/avatar-1.jpg" alt="emp1" class="team-employee">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-rectangle">
-                            <label style="margin-top: 5px; text-transform: uppercase;">ACP Pradyuman</label>
-                            <label style="text-transform: capitalize;">Knocking door is for poor people</label>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
-    </section> --}}
+    </section>
     <!-- End OF Team Section -->
 
     <!-- Blog Section -->

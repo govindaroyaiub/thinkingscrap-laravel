@@ -34,7 +34,8 @@ class DashboardController extends Controller
         $wingsData = Wing::get();
         $clientsData = Client::get();
         $companyData = Company::where('name', 'Thinking Scrap')->first();
-        return view('welcome', compact('wingsData', 'clientsData', 'companyData'));
+        $employeeData = Employee::get();
+        return view('welcome', compact('wingsData', 'clientsData', 'companyData', 'employeeData'));
     }
     public function messagesIndex(){
         $data = Contact::orderBy('created_at', 'DESC')->get();
