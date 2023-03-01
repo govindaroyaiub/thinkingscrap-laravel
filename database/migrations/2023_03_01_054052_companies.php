@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->longText('meta_description');
             $table->string('logo_path');
             $table->longText('who_we_are');
             $table->longText('what_we_do');

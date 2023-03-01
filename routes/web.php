@@ -28,6 +28,7 @@ Route::get('/clear-cache', function() {
 Route::get('/', [DashboardController::class, 'welcomePage'])->name('welcomePage');
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/dashboard/{id}', [DashboardController::class, 'dashboardPost'])->middleware(['auth', 'verified'])->name('dashboardPost');
 Route::get('/messages', [DashboardController::class, 'messagesIndex'])->middleware(['auth', 'verified'])->name('messages');
 Route::get('/wings', [DashboardController::class, 'wingsIndex'])->middleware(['auth', 'verified'])->name('wings');
 Route::get('/wings/add-new', [DashboardController::class, 'wingsAddNew'])->middleware(['auth', 'verified'])->name('wingsAddNew');

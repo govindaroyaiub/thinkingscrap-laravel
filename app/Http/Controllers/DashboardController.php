@@ -15,6 +15,20 @@ class DashboardController extends Controller
         return view('dashboard', compact('data'));
     }
 
+    public function dashboardPost(Request $request, $id){
+        $data = [
+            'meta_description' => $request->meta_description,
+            'who_we_are' => $request->who_we_are,
+            'what_we_do' => $request->what_we_do,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'email' => $request->email
+        ];
+
+        Company::where('id', $id)->update($data);
+        return redirect('/dashboard');
+    }
+
     public function welcomePage(){
         $wingsData = Wing::get();
         $clientsData = Client::get();
