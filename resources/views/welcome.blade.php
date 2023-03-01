@@ -704,12 +704,13 @@
             <h6 class="section-subtitle mb-5 text-center"></h6>
             <div class="relative" style="position: relative;">
                 <div class="owl-carousel client-carousel">
-                    @foreach ($clientsData as $client)
-                    <div class="item">
-                        <img class="client-image" src="{{ asset('client_images/'.$client->path) }}" alt="{{ $client->name }}" style="width: 160px; height: auto;"/>
-                    </div>
-                    @endforeach
-                   
+                    @if($clientsData != NULL)
+                        @foreach ($clientsData as $client)
+                        <div class="item">
+                            <img class="client-image" src="{{ asset('client_images/'.$client->path) }}" alt="{{ $client->name }}" style="width: 160px; height: auto;"/>
+                        </div>
+                        @endforeach
+                    @endif
                 </div>
                 <div class="my-owl-nav">
                     <span class="my-owl-button my-prev-button">

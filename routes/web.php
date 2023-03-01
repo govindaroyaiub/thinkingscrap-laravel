@@ -42,6 +42,12 @@ Route::post('/clients/add-new', [DashboardController::class, 'clientsAddNewPost'
 Route::get('/clients/edit/{id}', [DashboardController::class, 'clientsEditIndex'])->middleware(['auth', 'verified'])->name('clientsEditIndex');
 Route::post('/clients/edit/{id}', [DashboardController::class, 'clientsEditPost'])->middleware(['auth', 'verified'])->name('clientsEditPost');
 Route::get('/clients/delete/{id}', [DashboardController::class, 'clientsDelete'])->middleware(['auth', 'verified'])->name('clientsDelete');
+Route::get('/employees', [DashboardController::class, 'employeesIndex'])->middleware(['auth', 'verified'])->name('employees');
+Route::get('/employees/add-new', [DashboardController::class, 'employeesAddNew'])->middleware(['auth', 'verified'])->name('employeesAddNew');
+Route::post('/employees/add-new', [DashboardController::class, 'employeesAddNewPost'])->middleware(['auth', 'verified'])->name('employeesAddNewPost');
+Route::get('/employees/edit/{id}', [DashboardController::class, 'employeesEditIndex'])->middleware(['auth', 'verified'])->name('employeesEditIndex');
+Route::post('/employees/edit/{id}', [DashboardController::class, 'employeesEditPost'])->middleware(['auth', 'verified'])->name('employeesEditPost');
+Route::get('/employees/delete/{id}', [DashboardController::class, 'employeesDelete'])->middleware(['auth', 'verified'])->name('employeesDelete');
 
 Route::post('/contactStore', [DashboardController::class, 'contactStore'])->name('contactStore');
 

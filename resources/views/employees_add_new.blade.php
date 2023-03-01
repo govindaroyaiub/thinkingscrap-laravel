@@ -1,26 +1,38 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Clients -> Add New
+            Employees -> Add New
         </h2>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 antialiased">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg px-2 py-2">
-                <form action="/clients/add-new" method="POST" enctype="multipart/form-data">
+                <form action="/employees/add-new" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="p-4 text-gray-900">
-                        <label for="Client Name">Client Name</label>
+                        <label for="Employee Name">Employee Name</label>
                         <input type="text" class="mt-1 block w-full rounded" name="name">
                     </div>
                     <div class="p-4 text-gray-900">
-                        <label for="Client Logo">Client Logo</label>
-                        <input type="file" class="mt-1 block w-full rounded" accept="image/jpeg, image/png, image/jpg" name="logo" id="logo">
+                        <label for="Employee Designation">Employee Designation</label>
+                        <input type="text" class="mt-1 block w-full rounded" name="designation">
+                    </div>
+                    <div class="p-4 text-gray-900">
+                        <label for="Employee Department">Employee Department</label>
+                        <input type="text" class="mt-1 block w-full rounded" name="department">
+                    </div>
+                    <div class="p-4 text-gray-900">
+                        <label for="Employee Statement">Employee Statement</label>
+                        <textarea class="mt-1 block w-full rounded" name="statement" rows="5"></textarea>
+                    </div>
+                    <div class="p-4 text-gray-900">
+                        <label for="Employee Photo">Employee Photo</label>
+                        <input type="file" class="mt-1 block w-full rounded" accept="image/jpeg, image/png, image/jpg" name="photo" id="photo">
                     </div>
                     <div class="mt-2 py-2 px-2" id="image-preview" style="text-align: center; display: none; align-items: none; justify-content: center;">
                         <div>
-                            <label for="Wings Name" class="underline">Image Preview</label>
+                            <label for="Employee Name" class="underline">Image Preview</label>
                             <br>
                             <img src="" id="preview">
                         </div>
@@ -35,7 +47,7 @@
     </div>
 </x-app-layout>
 <script>
-    var fileTag = document.getElementById("logo"),
+    var fileTag = document.getElementById("photo"),
        preview = document.getElementById("preview");
         
     fileTag.addEventListener("change", function() {

@@ -7,6 +7,7 @@ use App\Models\Contact;
 use App\Models\Wing;
 use App\Models\Client;
 use App\Models\Company;
+use App\Models\Employee;
 
 class DashboardController extends Controller
 {
@@ -100,17 +101,17 @@ class DashboardController extends Controller
     public function clientsAddNewPost(Request $request){
         $validatedData = $request->validate([
             'logo' => 'required|image|mimes:jpg,png,jpeg,gif,svg'
-           ]);
+        ]);
     
-            $name = $request->name;
-            $imageName = time().'.'.$request->logo->extension();  
-        
-            $request->logo->move(public_path('client_images'), $imageName);
-        
-            $client = new Client;
-            $client->name = $name;
-            $client->path = $imageName;
-            $client->save();
+        $name = $request->name;
+        $imageName = time().'.'.$request->logo->extension();  
+    
+        $request->logo->move(public_path('client_images'), $imageName);
+    
+        $client = new Client;
+        $client->name = $name;
+        $client->path = $imageName;
+        $client->save();
 
         return redirect('/clients');
     }
@@ -159,5 +160,55 @@ class DashboardController extends Controller
 
         Client::where('id', $id)->delete();
         return redirect('/clients');
+    }
+
+    public function employeesIndex(){
+        $data = Employee::get();
+        return view('employees', compact('data'));
+    }
+
+    public function employeesAddNew(){
+        return view('employees_add_new');
+    }
+
+    public function employeesAddNewPost(Request $request){
+        $validatedData = $request->validate([
+            'photo' => 'required|image|mimes:jpg,png,jpeg,gif,svg'
+        ]);
+
+        $photoName = time().'.'.$request->photo->extension();  
+    
+        $request->photo->move(public_path('employee_images'), $photoName);
+
+        $employee = new Employee;
+        $employee->name = $request->name;
+        $employee->designation = $request->designation;
+        $employee->department = $request->department;
+        $employee->statement = $request->statement;
+        $employee->photo = $photoName;
+        $employee->save();
+
+        return redirect('/employees');
+    }
+
+    public function employeesEditIndex($id){
+        $data = Employee::find($id);
+        return view('employees_edit', compact('data'));
+    }
+
+    public function employeesEditPost(Request $request, $id){
+
+    }
+
+    public function employeesDelete($id){
+        $data = Employee::find($id);
+        $photoName = $data['photo'];
+
+        if (file_exists('employee_images/'.$photoName)) {
+            @unlink('employee_images/'.$photoName);
+        }
+
+        Employee::where('id', $id)->delete();
+        return redirect('/employees');
     }
 }

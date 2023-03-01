@@ -22,6 +22,11 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('employees')" :active="request()->routeIs('employees*')">
+                        Employees
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('clients')" :active="request()->routeIs('clients*')">
                         Clients
                     </x-nav-link>
@@ -90,6 +95,9 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('wings')" :active="request()->routeIs('wings*')">
                 Our Wings
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('employees')" :active="request()->routeIs('employees*')">
+                Employees
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('clients')" :active="request()->routeIs('clients*')">
                 Clients
