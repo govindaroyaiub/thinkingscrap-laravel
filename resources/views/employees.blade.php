@@ -17,7 +17,7 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Name</th>
-                                <th scope="col" style="text-align: center;">Designation & Designation</th>
+                                <th scope="col" style="text-align: center;">Designation & Department</th>
                                 <th scope="col" style="text-align: center;">Photo</th>
                                 <th scope="col">Statement</th>
                                 <th scope="col">Action</th>

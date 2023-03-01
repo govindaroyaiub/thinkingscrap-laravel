@@ -197,7 +197,35 @@ class DashboardController extends Controller
     }
 
     public function employeesEditPost(Request $request, $id){
+        $validatedData = $request->validate([
+            'photo' => 'image|mimes:jpg,png,jpeg,gif,svg'
+        ]);
 
+        $data = Employee::find($id);
+        $photoName = $data['photo'];
+
+        if($request->photo != NULL){
+            if (file_exists('employee_images/'.$photoName)) {
+                @unlink('employee_images/'.$photoName);
+            }
+    
+            $name = $request->name;
+            $photoName = time().'.'.$request->photo->extension();  
+        
+            $request->photo->move(public_path('employee_images'), $photoName);
+        }
+        
+        $newData = [
+            'name' => $request->name,
+            'designation' => $request->designation,
+            'department' => $request->department,
+            'statement' => $request->statement,
+            'photo' => $photoName
+        ];
+
+        Employee::where('id', $id)->update($newData);
+
+        return redirect('/employees');
     }
 
     public function employeesDelete($id){
