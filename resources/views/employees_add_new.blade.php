@@ -34,7 +34,7 @@
                         <div>
                             <label for="Employee Name" class="underline">Image Preview</label>
                             <br>
-                            <img src="" id="preview">
+                            <img src="" id="preview" style="width: 300px; height: auto;">
                         </div>
                     </div>
                     <div class="p-4 text-gray-900">

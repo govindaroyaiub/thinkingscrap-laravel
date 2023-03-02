@@ -552,10 +552,12 @@
                 <div class="mt-4 py-2 px-4 employeetooltip employeeImage">
                     <img class="size_of_img" src="{{ asset('employee_images/'.$employee->photo) }}" alt="Image 1" />
                     <div class="tooltiptext">
-                        <span>"{{ $employee->statement }}"</span>
-                        <hr style="margin: 5px 0 5px;">
+                        @if($employee->statement != '')
+                            <span>"{{ $employee->statement }}"</span>
+                            <hr style="margin: 5px 0 5px;">
+                        @endif
                         <div class="block">
-                            <span style="font-weight: bold; text-decoration: underline;">{{ $employee->name }}</span>
+                            <span style="font-weight: bold;">{{ $employee->name }}</span>
                             <br>
                             <span style="font-size: 12px;">{{ $employee->designation }}</span>
                             <br>
