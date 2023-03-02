@@ -297,39 +297,39 @@
             <div class="wrapper">
                 <div class="container-wrap">
                     <span class="num" data-val="1200">00</span>
-                    <h5 class="text" style="text-align: center;">Shares (%)</h5>
+                    <h5 class="text" style="text-align: center; font-size: 17px;">Shares (%)</h5>
                     <span class="text">More Shares Than
                         Image and Text
                         Content Combined</span>
                 </div>
                 <div class="container-wrap">
                     <span class="num" data-val="59">00</span>
-                    <h5 class="text" style="text-align: center;">Engagement (%)</h5>
+                    <h5 class="text" style="text-align: center; font-size: 17px;">Engagement (%)</h5>
                     <span class="text">More Engagement than Other
                         Types of Content</span>
                 </div>
                 <div class="container-wrap">
                     <span class="num" data-val="54">00</span>
-                    <h5 class="text" style="text-align: center;">People (%)</h5>
+                    <h5 class="text" style="text-align: center; font-size: 17px;">People (%)</h5>
                     <span class="text">Majority of the People Want Marketers to Produce More Video Content
                     </span>
                 </div>
                 <div class="container-wrap">
                     <span class="num" data-val="27">00</span>
-                    <h5 class="text" style="text-align: center;">Lift (%)</h5>
+                    <h5 class="text" style="text-align: center; font-size: 17px;">Lift (%)</h5>
                     <span class="text">Video Ad Campaigns Drive
                         More brand Awareness
                         Compared to Other Ads</span>
                 </div>
                 <div class="container-wrap">
                     <span class="num" data-val="54">00</span>
-                    <h5 class="text" style="text-align: center;">Min</h5>
+                    <h5 class="text" style="text-align: center; font-size: 17px;">Min</h5>
                     <span class="text">On Average A Person
                         Uses Facebook</span>
                 </div>
                 <div class="container-wrap">
                     <span class="num" data-val="8">0</span>
-                    <h5 class="text" style="text-align: center;">Billion</h5>
+                    <h5 class="text" style="text-align: center; font-size: 17px;">Billion</h5>
                     <span class="text">Daily Facebook
                         Views</span>
                 </div>
