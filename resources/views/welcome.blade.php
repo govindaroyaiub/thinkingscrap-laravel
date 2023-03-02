@@ -547,19 +547,50 @@
             <h6 class="section-title text-center" style="color: rgb(152, 17, 10);">The Team</h6>
             <h6 class="text-center mb-5 pb-3">Our dedicated team where we can't think a second and work without them!
             </h6>
-            <div class="row flex py-5" style="align-content: center; align-items: center; justify-content: center;">
-
+            <div class="row flex py-5 teamDesktop" style="align-content: center; align-items: center; justify-content: center;">
                 @foreach ($employeeData as $employee)
                 <div class="mt-4 py-2 px-4 employeetooltip employeeImage">
                     <img class="size_of_img" src="{{ asset('employee_images/'.$employee->photo) }}" alt="Image 1" />
                     <div class="tooltiptext">
                         <span>"{{ $employee->statement }}"</span>
-                        <hr>
+                        <hr style="margin: 5px 0 10px;">
                         <div class="block">
                             <span>{{ $employee->designation }}</span>
                             <br>
                             <span>{{ $employee->department }}</span>
                         </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            <div class="row teamMobile">
+                @foreach ($employeeData as $employee)
+                <div style="width: 350px; font-size: 13px; display: flex; margin-left: auto; margin-right: auto;">
+                    <div class="py-4 px-4 employeeImage">
+                        <img class="size_of_img" src="{{ asset('employee_images/'.$employee->photo) }}" alt="Image 1" />
+                    </div>
+                    <div class="mt-3 py-4 px-4">
+                        <span class="block">{{ $employee->name }}</span>
+                        <hr style="margin: 5px 0 5px;">
+                        <span class="block">{{ $employee->designation }}</span>
+                        <br>
+                        <span class="block">{{ $employee->department }}</span>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+            <div class="row teamTab">
+                @foreach ($employeeData as $employee)
+                <div style="width: 350px; font-size: 13px; display: flex; margin-left: auto; margin-right: auto;">
+                    <div class="py-4 px-4 employeeImage">
+                        <img class="size_of_img" src="{{ asset('employee_images/'.$employee->photo) }}" alt="Image 1" />
+                    </div>
+                    <div class="mt-3 py-4 px-4">
+                        <span class="block">{{ $employee->name }}</span>
+                        <hr style="margin: 5px 0 5px;">
+                        <span class="block">{{ $employee->designation }}</span>
+                        <br>
+                        <span class="block">{{ $employee->department }}</span>
                     </div>
                 </div>
                 @endforeach
@@ -673,7 +704,7 @@
             <h6 class="section-subtitle mb-5 text-center"></h6>
             <div class="relative" style="position: relative;">
                 <div class="owl-carousel client-carousel">
-                    @if($clientsData != NULL)
+                    @if($clientsData->count() != 0)
                         @foreach ($clientsData as $client)
                         <div class="item">
                             <img class="client-image" src="{{ asset('client_images/'.$client->path) }}" alt="{{ $client->name }}" style="width: 160px; height: auto;"/>
@@ -718,6 +749,7 @@
                 </div>
                 <div class="col-md-7">
                     <form id="contactForm" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <h4 class="mb-4">Drop Us A Line</h4>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
