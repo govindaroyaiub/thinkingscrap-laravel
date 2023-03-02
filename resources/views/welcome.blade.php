@@ -565,7 +565,7 @@
             </div>
             <div class="row teamMobile">
                 @foreach ($employeeData as $employee)
-                <div style="width: auto; font-size: 13px; display: flex; margin-left: auto; margin-right: auto;">
+                <div style="width: 350px; font-size: 13px; display: flex; margin-left: auto; margin-right: auto;">
                     <div class="py-4 px-4 employeeImage">
                         <img class="size_of_img" src="{{ asset('employee_images/'.$employee->photo) }}" alt="Image 1" />
                     </div>
