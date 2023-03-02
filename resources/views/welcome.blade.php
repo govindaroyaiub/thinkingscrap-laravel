@@ -553,11 +553,13 @@
                     <img class="size_of_img" src="{{ asset('employee_images/'.$employee->photo) }}" alt="Image 1" />
                     <div class="tooltiptext">
                         <span>"{{ $employee->statement }}"</span>
-                        <hr style="margin: 5px 0 10px;">
+                        <hr style="margin: 5px 0 5px;">
                         <div class="block">
-                            <span>{{ $employee->designation }}</span>
+                            <span style="font-weight: bold; text-decoration: underline;">{{ $employee->name }}</span>
                             <br>
-                            <span>{{ $employee->department }}</span>
+                            <span style="font-size: 12px;">{{ $employee->designation }}</span>
+                            <br>
+                            <span style="font-size: 12px;">{{ $employee->department }}</span>
                         </div>
                     </div>
                 </div>
