@@ -752,7 +752,7 @@
                     <p></p>
                 </div>
                 <div class="col-md-7">
-                    <form id="contactForm" method="POST" enctype="multipart/form-data">
+                    <form id="contactForm" action="" method="POST" enctype="multipart/form-data">
                         @csrf
                         <h4 class="mb-4">Drop Us A Line</h4>
                         <div class="form-row">
@@ -1163,6 +1163,9 @@
                         document.getElementById("email").value = '';
                         document.getElementById("subject").value = '';
                         document.getElementById("message").value = '';
+                        document.getElementById('loaderArea').style.display = "none";
+                    })
+                    .finally(function (){
                         document.getElementById('loaderArea').style.display = "none";
                     });
             });

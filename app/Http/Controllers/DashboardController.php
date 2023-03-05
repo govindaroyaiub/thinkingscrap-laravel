@@ -8,6 +8,8 @@ use App\Models\Wing;
 use App\Models\Client;
 use App\Models\Company;
 use App\Models\Employee;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMail;
 
 class DashboardController extends Controller
 {
@@ -48,6 +50,15 @@ class DashboardController extends Controller
         $contact->email = $request->email;
         $contact->subject = $request->subject;
         $contact->message = $request->message;
+
+        $details = [
+            'senderName' => $request->name,
+            'senderMessage' => $request->message,
+            'senderEmail' => $request->email,
+            'senderSubject' => $request->subject
+        ];
+
+        // Mail::to("govindaroy.ofc94@gmail.com")->send(new ContactMail($details));
         $contact->save();
     }
 
