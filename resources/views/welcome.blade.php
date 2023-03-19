@@ -733,8 +733,8 @@
     <section id="contact" class="section has-img-bg pb-0">
         <div class="container" style="text-align: center;">
             <h3>Where Are We Located?</h3>
-            <div id="map" style="overflow: hidden;"><img id="office-map" src="{{ asset('assets/imgs/Location.jpg') }}"
-                    alt="office-map">
+                <div id="map" style="overflow: hidden;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.731226155102!2d90.3698330153628!3d23.756962094441693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bfd0d34dc981%3A0x750fe90fb964952f!2sThinking%20scrap!5e0!3m2!1sen!2sbd!4v1679212908789!5m2!1sen!2sbd" style="border:0; width: 100%; height: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <br>
