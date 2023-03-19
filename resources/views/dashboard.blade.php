@@ -5,8 +5,10 @@
         </h2>
     </x-slot>
 
+   
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            @include('alert')
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-4 text-gray-900">
                     <label style="font-weight: bold;">Company Name:</label>

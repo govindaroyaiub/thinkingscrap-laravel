@@ -9,6 +9,8 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 antialiased">
+            @include('alert')
+
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <a href="/employees/add-new" style="float: right; padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Add New</a>   
                 <div class="p-6 text-gray-900">

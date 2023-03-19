@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 antialiased">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg px-2 py-2">
-                <form action="/clients/add-new" method="POST" enctype="multipart/form-data">
+                <form action="/wings/edit/{{ $data['id'] }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="p-4 text-gray-900">
                         <label for="Wings Name">Wings Name</label>

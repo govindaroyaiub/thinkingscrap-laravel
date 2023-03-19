@@ -9,6 +9,8 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 antialiased">
+            @include('alert')
+
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <a href="/wings/add-new" style="float: right; padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Add New</a>                
                 <div class="p-6 text-gray-900">
@@ -31,7 +33,7 @@
                                 <td data-label="Action">
                                     <div class="flex">
                                         <a href="/wings/edit/{{ $row->id }}" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Edit</a>     
-                                        <a href="/wings/delete/{{ $row->id }}" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Delete</a>     
+                                        <a href="/wings/delete/{{ $row->id }}" onclick="return confirm('Are you sure you want to delete?')" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Delete</a>     
                                     </div>
                                 </td>
                             </tr>

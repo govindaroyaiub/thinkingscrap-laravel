@@ -29,7 +29,7 @@ class DashboardController extends Controller
         ];
 
         Company::where('id', $id)->update($data);
-        return redirect('/dashboard');
+        return redirect('/dashboard')->with('success', 'Updated!');
     }
 
     public function welcomePage(){
@@ -77,7 +77,7 @@ class DashboardController extends Controller
         $wing->description = $request->description;
         $wing->save();
 
-        return redirect('/wings');
+        return redirect('/wings')->with('success', 'A Wing has been added!');
     }
 
     public function wingsEditIndex( $id){
@@ -92,13 +92,13 @@ class DashboardController extends Controller
         ];
 
         Wing::where('id', $id)->update($data);
-        return redirect('/wings');
+        return redirect('/wings')->with('info', 'Wing has been updated!');
     }
 
     public function wingsDelete($id){
         Wing::where('id', $id)->delete();
 
-        return redirect('/wings');
+        return redirect('/wings')->with('danger', 'Wing has been deleted!');
     }
 
     public function clientsIndex(){
@@ -125,7 +125,7 @@ class DashboardController extends Controller
         $client->path = $imageName;
         $client->save();
 
-        return redirect('/clients');
+        return redirect('/clients')->with('success', 'Client has been added!');
     }
 
     public function clientsEditIndex($id){
@@ -159,7 +159,7 @@ class DashboardController extends Controller
 
         Client::where('id', $id)->update($newData);
 
-        return redirect('/clients');
+        return redirect('/clients')->with('info', 'Client has been updated!');
     }
 
     public function clientsDelete($id){
@@ -171,7 +171,7 @@ class DashboardController extends Controller
         }
 
         Client::where('id', $id)->delete();
-        return redirect('/clients');
+        return redirect('/clients')->with('danger', 'Client has been deleted!');
     }
 
     public function employeesIndex(){
@@ -200,7 +200,7 @@ class DashboardController extends Controller
         $employee->photo = $photoName;
         $employee->save();
 
-        return redirect('/employees');
+        return redirect('/employees')->with('success', 'Employee has been added!');
     }
 
     public function employeesEditIndex($id){
@@ -237,7 +237,7 @@ class DashboardController extends Controller
 
         Employee::where('id', $id)->update($newData);
 
-        return redirect('/employees');
+        return redirect('/employees')->with('info', 'Employee has been updated!');
     }
 
     public function employeesDelete($id){
@@ -249,6 +249,6 @@ class DashboardController extends Controller
         }
 
         Employee::where('id', $id)->delete();
-        return redirect('/employees');
+        return redirect('/employees')->with('danger', 'Employee has been deleted!');
     }
 }
