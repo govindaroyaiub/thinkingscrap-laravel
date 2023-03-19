@@ -18,9 +18,9 @@
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
+                                <th scope="col" style="text-align: center;">Photo</th>
                                 <th scope="col">Name</th>
                                 <th scope="col" style="text-align: center;">Designation & Department</th>
-                                <th scope="col" style="text-align: center;">Photo</th>
                                 <th scope="col">Statement</th>
                                 <th scope="col">Action</th>
                             </tr>
@@ -30,13 +30,13 @@
                             @foreach ($data as $row)
                             <tr>
                                 <td data-label="serial">{{ $i++ }}</td>
-                                <td data-label="Name">{{ $row->name }}</td>
-                                <td data-label="Designation" style="text-align: center;">{{ $row->designation }} <hr> {{ $row->department }}</td>
                                 <td data-label="Photo">
                                     <div class="flex justify-center">
                                         <img src="{{ asset('employee_images/'. $row->photo) }}" alt="{{ $row->name }}" style="width: 70px; height: auto;">
                                     </div>
                                 </td>
+                                <td data-label="Name">{{ $row->name }}</td>
+                                <td data-label="Designation" style="text-align: center;">{{ $row->designation }} <hr> {{ $row->department }}</td>
                                 <td data-label="Statement">{{ $row->statement }}</td>
                                 <td data-label="Action">
                                     <div class="flex">
