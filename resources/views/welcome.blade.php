@@ -234,11 +234,11 @@
         <div class="overlay" style="text-transform: uppercase; text-align: center;">
             <div id="title"
                 style="display: flex; flex-direction: row; justify-content: space-around; transform: translateY(30px); opacity: 0; padding-left: 30px; padding-right: 30px; margin-left: auto; margin-right: auto;">
-                <i class="ti-quote-left" aria-hidden="true"></i>
+                <i class="ti-quote-left" aria-hidden="true" style="text-shadow: 0 0 10px #555;"></i>
                 <h1 class="title" style="text-shadow: 0 0 10px #555;">
                     An idea is formed by little scraps
                 </h1>
-                <i class="ti-quote-right" aria-hidden="true"></i>
+                <i class="ti-quote-right" aria-hidden="true" style="text-shadow: 0 0 10px #555;"></i>
             </div>
 
             {{-- <h1 class="title" style="transform: translateY(30px); opacity: 0;">says Thinking Scrap</h1> --}}

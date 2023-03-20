@@ -12546,14 +12546,13 @@ textarea.form-control {
   height: 100vh;
   min-height: 500px;
   overflow: hidden;
-  background-position: no-repeat center center fixed; 
-  background-attachment:scroll; 
+  background-attachment: fixed; 
   -o-background-size:cover; 
   -moz-background-size:cover; 
   -webkit-background-size:cover; 
   background-size:cover; 
   background-repeat:no-repeat;
-  background: url(../imgs/landing_bg_1.jpg) no-repeat center center fixed;
+  background-image: url(../imgs/landing_bg_1.jpg);
 }
 
 .header .overlay {
@@ -12754,15 +12753,14 @@ textarea.form-control {
 .section.has-img-bg {
   position: relative;
   color: #fff;
-  background-image:url(../imgs/landing_bg_1.jpg); 
-  background-position:center top fixed; 
-  background-attachment:scroll; 
+  overflow: hidden;
+  background-attachment: fixed; 
   -o-background-size:cover; 
   -moz-background-size:cover; 
   -webkit-background-size:cover; 
   background-size:cover; 
   background-repeat:no-repeat;
-  background: url(../imgs/landing_bg_1.jpg) no-repeat center center fixed;
+  background-image: url(../imgs/landing_bg_1.jpg);
 }
 
 .section.has-img-bg * {
