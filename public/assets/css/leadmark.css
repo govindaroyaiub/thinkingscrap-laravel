@@ -12545,14 +12545,14 @@ textarea.form-control {
   position: relative;
   height: 100vh;
   min-height: 500px;
-  overflow: hidden;
+  /* background: url(../imgs/landing_bg_1.jpg) no-repeat center fixed;
   background-attachment: fixed; 
   -o-background-size:cover; 
   -moz-background-size:cover; 
   -webkit-background-size:cover; 
   background-size:cover; 
-  background-repeat:no-repeat;
-  background-image: url(../imgs/landing_bg_1.jpg);
+  background-repeat:no-repeat; */
+  overflow: hidden;
 }
 
 .header .overlay {
@@ -12753,14 +12753,14 @@ textarea.form-control {
 .section.has-img-bg {
   position: relative;
   color: #fff;
-  overflow: hidden;
+  background: url(../imgs/landing_bg_1.jpg) no-repeat center fixed;
   background-attachment: fixed; 
   -o-background-size:cover; 
   -moz-background-size:cover; 
   -webkit-background-size:cover; 
   background-size:cover; 
   background-repeat:no-repeat;
-  background-image: url(../imgs/landing_bg_1.jpg);
+  overflow: hidden;
 }
 
 .section.has-img-bg * {

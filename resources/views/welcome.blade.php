@@ -13,8 +13,6 @@
     <!-- Bootstrap + LeadMark main styles -->
     <link rel="stylesheet" href="{{ URL::asset('assets/css/leadmark.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <style>
         .mpopup {
@@ -231,6 +229,7 @@
 
     <!-- Page Header -->
     <header class="header" id="header">
+        <img class="thumbnail" src="{{ asset('assets/imgs/landing_bg_1.jpg') }}" alt="image">
         <div class="overlay" style="text-transform: uppercase; text-align: center;">
             <div id="title"
                 style="display: flex; flex-direction: row; justify-content: space-around; transform: translateY(30px); opacity: 0; padding-left: 30px; padding-right: 30px; margin-left: auto; margin-right: auto;">
@@ -816,7 +815,15 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script>
+        var images = document.getElementsByClassName('thumbnail');
+        new simpleParallax(images, {
+            delay: .6,
+            transition: 'cubic-bezier(0,0,0,1)'
+        });
         // Select modal
         var mpopup = document.getElementById('mpopupBox');
 
