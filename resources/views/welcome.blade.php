@@ -377,11 +377,11 @@
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
+                            
+                        <h4 style="text-align: center; font-weight: bold; text-decoration: underline;">Bosphorus</h4>
                         <div class="card-body">
-                            <h6 class="card-title">Bosphorus</h6>
-                            <p>We are promoting this premium restaurant which is slowly making its way forward <span id="bosphorusdots">...</span>
-                            <span id="bosphorusmore">to be one of the best coffee shop in town, through digital content, digital 
-                            engagement, campaign, brand promotion,  print & production.</span><a href="javascript:void(0)" onclick="revealbosphorusmore()" id="revealbosphorusmore" style="color:rgb(152, 17, 10)">Read more</a></p></p></p>
+                            <p class="testimonials-text">We are promoting this premium restaurant which is slowly making its way forward to be one of the best coffee shop in town, through digital content, digital 
+                                engagement, campaign, brand promotion,  print & production.</p>
                             <a href="javascript:void(0)" class="small text-muted"
                                 style="position: absolute; bottom: 10px; text-decoration: underline;"
                                 id="mpopupLink">See Our Work</a>
@@ -414,12 +414,12 @@
                     <div class="card border-0 mb-4 work-section" style="border-radius: 10px; background-color: #f5ba56;">
                         <img src="{{ asset('assets/clients/Bosphorus.png') }}" alt="image"
                             style="width: 250px; margin: 15px auto;">
+                            <h4 style="text-align: center; font-weight: bold; text-decoration: underline;">Black Forest Resort</h4>
                         <div class="card-body">
-                            <h6 class="card-title">Black Forest Resort</h6>
-                            <p>We are promoting this exotic resort which is slowly making its way forward <span id="bfrdots">...</span>
-                                <span id="bfrmore">to be one of the best eco-tourism resort in Bangladesh, through digital content, digital 
-                                enagagement, and brand promotion.</span><a href="javascript:void(0)" onclick="revealbfrmore()" id="revealbfrmore" style="color:rgb(152, 17, 10)">Read more</a></p></p>
-                            <a href="javascript:void(0)" class="small text-muted"
+                            
+                            <p class="testimonials-text">We are promoting this exotic resort which is slowly making its way forward to be one of the best eco-tourism resort in Bangladesh, through digital content, digital 
+                                enagagement, and brand promotion.</p>
+                                <a href="javascript:void(0)" class="small text-muted"
                                 style="position: absolute; bottom: 10px; text-decoration: underline;"
                                 id="mpopupLink">See Our Work</a>
                         </div>
@@ -1080,6 +1080,36 @@
             scrollFunction();
         };
         window.onload = function () {
+            
+            var showChar = 80;
+            var moretext = " See More";
+            var lesstext = " See Less";
+            var ellipsestext = "<span class='moreelipses'> ...</span>";
+
+            // Will Shorten Text and Add Addtional HTML Tags
+            $('.testimonials-text').each(function() {
+                var content = $(this).html();
+                if (content.length > showChar) {
+                    var show_content = content.substr(0, showChar);
+                    var hide_content = content.substr(showChar, content.length - showChar);
+                    var html = show_content + ellipsestext + '<span class="remaining-content">' + hide_content + '</span><a href="" class="morelink" style="color: red;">' + moretext + '</a></span>';
+                    $(this).html(html);
+                }
+            });
+
+            $(".morelink").click(function() {
+                if ($(this).hasClass("less")) {
+                    $(this).removeClass("less");
+                    $(this).html(moretext);
+                } else {
+                    $(this).addClass("less");
+                    $(this).html(lesstext);
+                }
+                $(this).parent().prev().toggle();
+                $(this).prev().toggle();
+                return false;
+            });
+
             scrollFunction();
 
             const tl = gsap.timeline();
@@ -1114,6 +1144,8 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
+
+        
 
         $(document).ready(function () {
             $("#contactForm").submit(function (e) {
