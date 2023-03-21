@@ -1082,9 +1082,8 @@
         window.onload = function () {
             
             var showChar = 80;
-            var moretext = " See More";
-            var lesstext = " See Less";
-            var ellipsestext = "<span class='moreelipses'> ...</span>";
+            var moretext = " .... Read More";
+            var lesstext = " Read Less";
 
             // Will Shorten Text and Add Addtional HTML Tags
             $('.testimonials-text').each(function() {
@@ -1092,7 +1091,7 @@
                 if (content.length > showChar) {
                     var show_content = content.substr(0, showChar);
                     var hide_content = content.substr(showChar, content.length - showChar);
-                    var html = show_content + ellipsestext + '<span class="remaining-content">' + hide_content + '</span><a href="" class="morelink" style="color: red;">' + moretext + '</a></span>';
+                    var html = show_content + '<span class="remaining-content">' + hide_content + '</span><a href="" class="morelink" style="color: red;">' + moretext + '</a></span>';
                     $(this).html(html);
                 }
             });

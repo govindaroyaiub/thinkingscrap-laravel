@@ -14,7 +14,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <a href="/clients/add-new" style="float: right; padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Add New</a>   
                 <div class="p-6 text-gray-900">
-                    <table id="myTable">
+                    <table id="myTable" class="table-auto">
                         <thead>
                             <tr>
                                 <th scope="col">Name</th>

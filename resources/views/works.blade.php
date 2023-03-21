@@ -3,7 +3,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Employees
+            Our Works
         </h2>
     </x-slot>
 
@@ -12,36 +12,29 @@
             @include('alert')
 
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <a href="/employees/add-new" style="float: right; padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Add New</a>   
+                <a href="/works/add-new" style="float: right; padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Add New</a>                
                 <div class="p-6 text-gray-900">
                     <table id="myTable" class="table-auto">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
-                                <th scope="col" style="text-align: center;">Photo</th>
                                 <th scope="col">Name</th>
-                                <th scope="col" style="text-align: center;">Designation & Department</th>
-                                <th scope="col">Statement</th>
+                                <th scope="col">Summary</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $i = 1; ?>
+                            <?php $i = 1 ?>
                             @foreach ($data as $row)
                             <tr>
-                                <td data-label="serial">{{ $i++ }}</td>
-                                <td data-label="Photo">
-                                    <div class="flex justify-center">
-                                        <img src="{{ asset('employee_images/'. $row->photo) }}" alt="{{ $row->name }}" style="width: 70px; height: auto;">
-                                    </div>
-                                </td>
-                                <td data-label="Name">{{ $row->name }}</td>
-                                <td data-label="Designation" style="text-align: center;">{{ $row->designation }} <hr> {{ $row->department }}</td>
-                                <td data-label="Statement">{{ $row->statement }}</td>
+                                <td data-label="Name">{{ $i++ }}</td>
+                                <td data-label="Client_id">{{ Helper::getClientName($row->client_id) }}</td>
+                                <td data-label="Summary">{{ $row->summary }}</td>
                                 <td data-label="Action">
                                     <div class="flex">
-                                        <a href="/employees/edit/{{ $row->id }}" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Edit</a>     
-                                        <a href="/employees/delete/{{ $row->id }}" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Delete</a>     
+                                        <a href="" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">View</a>     
+                                        <a href="/wings/edit/{{ $row->id }}" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Edit</a>     
+                                        <a href="/wings/delete/{{ $row->id }}" onclick="return confirm('Are you sure you want to delete?')" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Delete</a>     
                                     </div>
                                 </td>
                             </tr>

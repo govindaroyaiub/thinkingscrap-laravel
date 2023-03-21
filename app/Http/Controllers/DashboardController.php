@@ -8,6 +8,8 @@ use App\Models\Wing;
 use App\Models\Client;
 use App\Models\Company;
 use App\Models\Employee;
+use App\Models\Work;
+use App\Models\WorkFile;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail;
 
@@ -250,5 +252,46 @@ class DashboardController extends Controller
 
         Employee::where('id', $id)->delete();
         return redirect('/employees')->with('danger', 'Employee has been deleted!');
+    }
+
+    public function worksIndex(){
+        $data = Work::get();
+        return view('works', compact('data'));
+    }
+
+    public function worksAddNew(){
+        $clients = Client::orderBy('name', 'ASC')->get();
+        return view('works_add_new', compact('clients'));
+    }
+
+    public function worksAddNewPost(Request $request){
+        $validated = $request->validate([
+            'client_id' => 'required|unique:works',
+            'files' => 'required',
+        ]);
+
+        $work = new Work;
+        $work->client_id = $request->client_id;
+        $work->summary = $request->summary;
+
+
+        $images = $request->file('files');
+        if ($request->hasFile('files')){
+            foreach ($images as $item) {
+                $workFile = new WorkFile;
+                $workFile->client_id = $request->client_id;
+
+                $fileName = time() . '.' . $item->extension();
+                $item->move(public_path('work_images'), $fileName);
+
+                $workFile->file = $fileName;
+                $workFile->save();
+            }
+        }
+
+        $work->files_id = $workFile->id;
+        $work->save();
+
+        return redirect('/works')->with('success', 'Work has been added!');
     }
 }
