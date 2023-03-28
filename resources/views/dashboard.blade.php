@@ -45,9 +45,8 @@
                         <textarea type="text" class="mt-1 w-full rounded" name="what_we_do"
                             rows="5">{{ $data['what_we_do'] }}</textarea>
                     </div>
-                    <div class="p-4 text-gray-900">
-                        <button type="submit" class="mt-2 rounded px-2 py-2 text-white"
-                            style="background-color: rgb(105, 187, 105)">Submit</button>
+                    <div class="px-4">
+                        <button type="submit" class="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
                     </div>
                 </form>
             </div>

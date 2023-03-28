@@ -19,8 +19,8 @@
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Name</th>
-                                <th scope="col">Description</th>
-                                <th scope="col">Action</th>
+                                <th scope="col" style="text-align: center;">Description</th>
+                                <th scope="col" style="text-align: center;">Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -32,8 +32,12 @@
                                 <td data-label="Description">{{ $row->description }}</td>
                                 <td data-label="Action">
                                     <div class="flex">
-                                        <a href="/wings/edit/{{ $row->id }}" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Edit</a>     
-                                        <a href="/wings/delete/{{ $row->id }}" onclick="return confirm('Are you sure you want to delete?')" style="padding: 10px 10px 10px 10px; margin-right: 10px; text-decoration: underline;">Delete</a>     
+                                        <a href="/wings/edit/{{ $row->id }}">
+                                            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button>
+                                        </a>     
+                                        <a href="/wings/delete/{{ $row->id }}" onclick="return confirm('Are you sure you want to delete?')">
+                                            <button type="button" class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Delete</button>
+                                        </a>     
                                     </div>
                                 </td>
                             </tr>

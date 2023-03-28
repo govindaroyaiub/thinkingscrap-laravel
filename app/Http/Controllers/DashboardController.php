@@ -36,7 +36,7 @@ class DashboardController extends Controller
 
     public function welcomePage(){
         $wingsData = Wing::get();
-        $clientsData = Client::get();
+        $clientsData = Client::where('is_show', 1)->get();
         $companyData = Company::where('name', 'Thinking Scrap')->first();
         $employeeData = Employee::get();
         return view('welcome', compact('wingsData', 'clientsData', 'companyData', 'employeeData'));
@@ -114,6 +114,7 @@ class DashboardController extends Controller
 
     public function clientsAddNewPost(Request $request){
         $validatedData = $request->validate([
+            'name'  => 'required',
             'logo' => 'required|image|mimes:jpg,png,jpeg,gif,svg'
         ]);
     

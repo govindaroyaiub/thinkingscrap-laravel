@@ -16,8 +16,8 @@
                             <tr>
                                 <th scope="col">Name</th>
                                 <th scope="col">Email</th>
-                                <th scope="col">Subject</th>
-                                <th scope="col">Message</th>
+                                <th scope="col" style="text-align: center;">Subject</th>
+                                <th scope="col" style="text-align: center;">Message</th>
                             </tr>
                         </thead>
                         <tbody>
