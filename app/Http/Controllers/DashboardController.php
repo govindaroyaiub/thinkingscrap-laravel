@@ -271,6 +271,7 @@ class DashboardController extends Controller
         $validated = $request->validate([
             'client_id' => 'required|unique:works',
             'files' => 'required',
+            'summary' => 'required',
         ]);
 
         $work = new Work;
