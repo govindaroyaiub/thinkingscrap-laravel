@@ -15,6 +15,13 @@
                         <input type="text" class="mt-1 block w-full rounded" name="name">
                     </div>
                     <div class="p-4 text-gray-900">
+                        <label for="is_show" class="block mb-2 text-sm font-medium text-gray-900">Show Logo On Website?</label>
+                            <select id="is_show" name="is_show" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option value="1" selected>Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="p-4 text-gray-900">
                         <label for="Client Logo">Client Logo</label>
                         <input type="file" class="mt-1 block w-full rounded" accept="image/jpeg, image/png, image/jpg" name="logo" id="logo">
                     </div>

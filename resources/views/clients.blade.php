@@ -19,6 +19,7 @@
                             <tr>
                                 <th scope="col">Name</th>
                                 <th scope="col" style="text-align: center;">Logo</th>
+                                <th scope="col" style="text-align: center;">Visibility</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>
@@ -30,6 +31,13 @@
                                     <div class="flex justify-center">
                                         <img src="{{ asset('client_images/'.$row->path) }}" alt="{{ $row->name }}" style="width: 130px; height: auto;">
                                     </div>
+                                </td>
+                                <td data-label="Visibility" style="text-align: center;">
+                                    @if($row->is_show == 1) 
+                                        Visible 
+                                    @else 
+                                        Hidden
+                                    @endif
                                 </td>
                                 <td data-label="Action">
                                     <div class="flex">

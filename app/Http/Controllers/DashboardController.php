@@ -124,6 +124,7 @@ class DashboardController extends Controller
     
         $client = new Client;
         $client->name = $name;
+        $client->is_show = $request->is_show;
         $client->path = $imageName;
         $client->save();
 
@@ -156,6 +157,7 @@ class DashboardController extends Controller
         
         $newData = [
             'name' => $request->name,
+            'is_show' => $request->is_show,
             'path' => $imageName
         ];
 
