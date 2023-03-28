@@ -18,12 +18,12 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('wings')" :active="request()->routeIs('wings*')">
-                        Our Wings
+                        Wings
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('works')" :active="request()->routeIs('works*')">
-                        Our Works
+                        Works
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
@@ -99,10 +99,10 @@
         </div>
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('wings')" :active="request()->routeIs('wings*')">
-                Our Wings
+                Wings
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('works')" :active="request()->routeIs('works*')">
-                Our Works
+                Works
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('employees')" :active="request()->routeIs('employees*')">
                 Employees
